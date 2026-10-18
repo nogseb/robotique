@@ -1,0 +1,266 @@
+{
+  "numero": 0,
+  "semaine_iso": "2026-S42",
+  "periode": { "debut": "2026-10-12", "fin": "2026-10-18" },
+  "date_publication": "2026-10-19",
+  "essentiel": [
+    "L'IA des robots devient un service : le même jour, Physical Intelligence et Google ont ouvert l'accès à leurs modèles aux développeurs.",
+    "Les cinq grandes levées de la semaine, 510 millions de dollars au total, sont allées à des acteurs spécialisés ; aucune à un humanoïde.",
+    "Sur le terrain, l'automatisation reste sélective : chez Hyundai en Inde, la soudure est entièrement robotisée, l'assemblage reste surtout manuel."
+  ],
+  "signaux": [
+    {
+      "id": "2026-S42-01",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "ABB IRB 1700",
+      "titre": "ABB lance deux bras industriels plus compacts et plus précis",
+      "fait": "Les IRB 1700 et 1700ID portent de 6 à 12 kg, reviennent au même point à 0,03 mm près et prennent deux fois moins de place au sol, selon ABB.",
+      "portee": "Ce robot classique, pas l'humanoïde, est celui qui s'installe par centaines de milliers chaque année dans les usines.",
+      "type": "produit",
+      "maturite": "commercialise",
+      "zone": "chine",
+      "horizon": "moins-1-an",
+      "acteurs": ["ABB"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-15",
+      "sources": [
+        {
+          "titre": "ABB launches compact robots targeting precision manufacturing",
+          "editeur": "Automation News",
+          "url": "https://automationnews.com/products/robotics/abb-launches-compact-robots-targeting-precision-manufacturing/",
+          "date": "2026-10-15",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S42-02",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "Main d'Atlas",
+      "titre": "Boston Dynamics arrête la main d'Atlas à quatre doigts, pour l'instant",
+      "fait": "La main du robot humanoïde Atlas compte quatre doigts et 13 mouvements indépendants ; un cinquième doigt aurait coûté trois moteurs de plus.",
+      "portee": "Son concepteur admet que le matériel des humanoïdes actuels n'est pas encore celui qui sera produit en grande série.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["Boston Dynamics"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-13",
+      "sources": [
+        {
+          "titre": "Boston Dynamics' Robot Behavior Director on Atlas's Ever-Evolving Hand",
+          "editeur": "A3",
+          "url": "https://www.automate.org/robotics/industry-insights/boston-dynamics-robot-behavior-director-on-atlas-s-ever-evolving-hand",
+          "date": "2026-10-13",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S42-03",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "API Physical Intelligence",
+      "titre": "Physical Intelligence loue ses modèles d'IA pour robots par internet",
+      "fait": "En test sur liste d'attente, le service permet d'envoyer ses données, d'adapter un modèle à son propre robot et de le faire tourner à distance.",
+      "portee": "Une start-up a obtenu un modèle utile en quatre jours, selon l'entreprise, qui signale aussi des coupures réseau chez certains testeurs.",
+      "type": "produit",
+      "maturite": "pilote",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["Physical Intelligence", "Almond"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-13",
+      "sources": [
+        {
+          "titre": "Frontier Models for Every Robot: Announcing our API beta",
+          "editeur": "Physical Intelligence",
+          "url": "https://www.pi.website/blog/api-beta",
+          "date": "2026-10-13",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S42-04",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "Gemini 4 Argon",
+      "titre": "Google présente Gemini 4 Argon comme un cerveau de raisonnement pour robots",
+      "fait": "Le modèle planifie les gestes, construit des simulations et annote des données d'entraînement, plutôt que de commander lui-même chaque moteur.",
+      "portee": "Selon Google, ses données de simulation ont fait passer un robot réel de 56 % à 75 % de réussite sur un banc d'essai.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["Google"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-13",
+      "sources": [
+        {
+          "titre": "Gemini 4 Argon for Robotics",
+          "editeur": "Google for Developers",
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "date": "2026-10-13",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S42-05",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Symbotic et cellumation",
+      "titre": "Symbotic rachète l'allemand cellumation pour couvrir tout l'entrepôt",
+      "fait": "L'américain s'offre le fabricant brêmois d'un convoyeur modulaire piloté par logiciel, déjà utilisé par des opérateurs postaux. Montant non communiqué.",
+      "portee": "Troisième rachat de l'année pour Symbotic : la concurrence se joue désormais sur l'entrepôt entier, pas sur un robot isolé.",
+      "type": "financement",
+      "maturite": "deploye",
+      "zone": "europe",
+      "horizon": "moins-1-an",
+      "acteurs": ["Symbotic", "cellumation"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-10-13",
+      "sources": [
+        {
+          "titre": "New Chapter: Symbotic acquires cellumation",
+          "editeur": "cellumation",
+          "url": "https://cellumation.com/newsroom-en/press-release/new-chapter-symbotic-acquires-cellumation/",
+          "date": "2026-10-13",
+          "fiabilite": "primaire"
+        },
+        {
+          "titre": "Symbotic Is Building More Than Warehouse Robots. Its Latest Acquisition Shows Why.",
+          "editeur": "A3",
+          "url": "https://www.automate.org/motion-control/industry-insights/symbotic-is-building-more-than-warehouse-robots-its-latest-acquisition-shows-why",
+          "date": "2026-10-17",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S42-06",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Promise Robotics",
+      "titre": "Promise Robotics va préfabriquer plus de 1 250 maisons pour D.R. Horton",
+      "fait": "Le premier constructeur de maisons des États-Unis confie à cette start-up la fabrication robotisée de murs et de planchers, dans des micro-usines.",
+      "portee": "Le client achète de la capacité sans investir dans une usine ; les premiers sites ouvrent au Canada et à Phoenix.",
+      "type": "partenariat",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["Promise Robotics", "D.R. Horton"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-13",
+      "sources": [
+        {
+          "titre": "Promise Robotics partners with D.R. Horton on physical AI for homebuilding",
+          "editeur": "The Robot Report",
+          "url": "https://www.therobotreport.com/promise-robotics-partners-d-r-horton-physical-ai-homebuilding/",
+          "date": "2026-10-13",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S42-07",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Cinq levées de fonds",
+      "titre": "510 millions de dollars levés en cinq tours, aucun pour un humanoïde",
+      "fait": "ICON (construction, 200 M USD), MMI (microchirurgie, 125), Multiply Labs (médicaments, 75), Mecka AI (données, 60) et Ultra (entrepôt, 50).",
+      "portee": "Les investisseurs misent cette semaine sur des robots spécialisés qui revendiquent déjà des clients.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "monde",
+      "horizon": "moins-1-an",
+      "acteurs": ["ICON", "MMI", "Multiply Labs", "Mecka AI", "Ultra"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-10-14",
+      "sources": [
+        {
+          "titre": "Robotics Raises: ICON, Mecka AI, Multiply Labs, MMI, Ultra",
+          "editeur": "A3",
+          "url": "https://www.automate.org/robotics/industry-insights/robotics-raises-icon-mecka-ai-multiply-labs-mmi-ultra",
+          "date": "2026-10-14",
+          "fiabilite": "presse"
+        }
+      ]
+    }
+  ],
+  "chiffre": {
+    "valeur": "7 000",
+    "libelle": "humanoïdes vendus dans le monde en 2025",
+    "contexte": "Contre plus de 600 000 robots industriels installés la même année, selon la Fédération internationale de la robotique (IFR). Beaucoup de ces humanoïdes ont été achetés pour collecter des données, pas pour produire.",
+    "sources": [
+      {
+        "titre": "Just 7,000 humanoid robots sold worldwide in 2025",
+        "editeur": "Automation News",
+        "url": "https://automationnews.com/products/robotics/just-7000-humanoid-robots-sold-worldwide-in-2025/",
+        "date": "2026-09-21",
+        "fiabilite": "presse"
+      },
+      {
+        "titre": "India's Robot Boom: Why Low Labor Costs Are No Longer Enough to Keep Factories Manual",
+        "editeur": "A3",
+        "url": "https://www.automate.org/robotics/industry-insights/indias-robot-boom-why-low-labor-costs-are-no-longer-enough-to-keep-factories-manual",
+        "date": "2026-10-16",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "cas_usage": {
+    "titre": "Hyundai à Pune, robotiser là où ça paie",
+    "entreprise": "Hyundai Motor India, usine de Pune (ancien site General Motors).",
+    "tache_robotisee": "La soudure des caisses, entièrement automatisée par 204 robots, contre 6 à l'époque de General Motors.",
+    "reste_manuel": "L'essentiel de l'assemblage : environ 10 % seulement des tâches de pose de pièces sont automatisées.",
+    "resultats_annonces": "170 000 véhicules par an aujourd'hui, 320 000 visés en 2030, pour un investissement allant jusqu'à 1,2 milliard de dollars.",
+    "a_retenir": "Le robot est choisi pour la qualité et la régularité, pas pour économiser une main-d'œuvre encore peu chère en Inde.",
+    "sources": [
+      {
+        "titre": "India's Robot Boom: Why Low Labor Costs Are No Longer Enough to Keep Factories Manual",
+        "editeur": "A3",
+        "url": "https://www.automate.org/robotics/industry-insights/indias-robot-boom-why-low-labor-costs-are-no-longer-enough-to-keep-factories-manual",
+        "date": "2026-10-16",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "agenda": [
+    {
+      "debut": "2026-10-20",
+      "fin": "2026-10-21",
+      "evenement": "RoboBusiness",
+      "lieu": "Santa Clara, États-Unis",
+      "pourquoi": "Le principal salon américain consacré au business de la robotique.",
+      "url": "https://www.robobusiness.com/"
+    },
+    {
+      "debut": "2026-10-27",
+      "fin": "2026-10-28",
+      "evenement": "ROSCon Spain",
+      "lieu": "Valence, Espagne",
+      "pourquoi": "La rencontre de la communauté ROS, le logiciel libre qui fait tourner une grande partie des robots, la plus proche de la France.",
+      "url": "https://roscon.org.es/roscon2026/ROSConES2026.html"
+    },
+    {
+      "debut": "2026-11-09",
+      "fin": "2026-11-12",
+      "evenement": "CoRL 2026",
+      "lieu": "Austin, États-Unis",
+      "pourquoi": "La conférence de référence sur l'apprentissage des robots, où sortent les modèles de l'année.",
+      "url": "https://2026.corl.org/"
+    }
+  ],
+  "mot_de_la_semaine": {
+    "terme": "VLA (vision-langage-action)",
+    "slug": "vla",
+    "definition": "Un modèle d'IA qui reçoit des images et une consigne en langage courant, puis produit directement les mouvements du robot. C'est ce type de modèle que Physical Intelligence propose désormais en location.",
+    "signal_lie": "2026-S42-03"
+  },
+  "errata": []
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "terme": "VLA (vision-langage-action)",
+    "slug": "vla",
+    "definition": "Un modèle d'IA qui reçoit des images et une consigne en langage courant, puis produit directement les mouvements du robot. C'est ce type de modèle que Physical Intelligence propose désormais en location.",
+    "semaine": "2026-S42"
+  }
+]

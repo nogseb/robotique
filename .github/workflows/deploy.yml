@@ -1,0 +1,81 @@
+# Valide les éditions, génère le site et le publie sous nogues.app/robotique (hébergement web OVHcloud), en SFTP.
+#
+# Réglages (Settings > Secrets and variables > Actions de CE dépôt), jamais écrits ici :
+#   secrets   OVH_SFTP_HOST      serveur FTP/SFTP de l'hébergement (onglet « FTP - SSH » de l'espace client)
+#             OVH_SFTP_USER      login FTP (case SFTP cochée dans ce même onglet)
+#             OVH_SFTP_PASSWORD  mot de passe FTP
+#   variable  OVH_TARGET_DIR     dossier de destination (par défaut : www/robotique)
+#
+# Une erreur de validation dans data/editions arrête le workflow avant tout envoi : rien n'est publié.
+# Sans les secrets, le site est généré et vérifié, mais rien n'est envoyé.
+# Les fichiers sont ajoutés ou remplacés ; rien n'est supprimé sur le serveur.
+
+name: Publier la veille robotique
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-robotique
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SFTP_HOST: ${{ secrets.OVH_SFTP_HOST }}
+      SFTP_USER: ${{ secrets.OVH_SFTP_USER }}
+      LFTP_PASSWORD: ${{ secrets.OVH_SFTP_PASSWORD }}
+      TARGET_DIR: ${{ vars.OVH_TARGET_DIR || 'www/robotique' }}
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Valider les éditions et générer le site
+        run: |
+          python3 build.py
+          echo "Site généré : $(find dist -type f | wc -l) fichiers" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Vérifier la configuration de publication
+        id: check
+        if: github.event_name != 'pull_request'
+        run: |
+          if [ -z "$SFTP_HOST" ] || [ -z "$SFTP_USER" ] || [ -z "$LFTP_PASSWORD" ]; then
+            echo "::warning::Secrets OVH_SFTP_HOST, OVH_SFTP_USER ou OVH_SFTP_PASSWORD absents de ce dépôt : site généré mais pas publié."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          case "${TARGET_DIR%/}" in
+            ""|"."|"/"|"www")
+              echo "::error::Dossier cible refusé (« $TARGET_DIR ») : indiquez www/robotique."
+              exit 1 ;;
+          esac
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      - name: Installer lftp
+        if: steps.check.outputs.ready == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Envoyer dist/ en SFTP
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          lftp --env-password -u "$SFTP_USER" "sftp://$SFTP_HOST" -e "
+            set sftp:auto-confirm yes;
+            set net:timeout 20; set net:max-retries 3; set net:reconnect-interval-base 5;
+            mkdir -p -f '$TARGET_DIR';
+            mirror --reverse --parallel=4 dist/ '$TARGET_DIR';
+            cls -1 '$TARGET_DIR';
+            bye"
+          echo "Publication terminée dans $TARGET_DIR : https://nogues.app/robotique/" >> "$GITHUB_STEP_SUMMARY"
