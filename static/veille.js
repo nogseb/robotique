@@ -1,3 +1,37 @@
+/* Bascule mode clair / sombre. Par défaut, le site suit le réglage de l'appareil ;
+   le choix fait avec le bouton est mémorisé sur cet appareil (clé nogues-theme), puis appliqué dès l'en-tête de page. */
+(() => {
+  'use strict';
+  const bouton = document.querySelector('[data-bascule-theme]');
+  if (!bouton) return;
+  const racine = document.documentElement;
+  const systeme = window.matchMedia('(prefers-color-scheme: dark)');
+  const COULEURS = { light: '#EEF1F3', dark: '#12161C' };
+  const effectif = () => racine.dataset.theme || (systeme.matches ? 'dark' : 'light');
+
+  const afficher = () => {
+    const sombre = effectif() === 'dark';
+    const action = sombre ? 'Passer en mode clair' : 'Passer en mode sombre';
+    bouton.classList.toggle('sombre', sombre);
+    bouton.setAttribute('aria-label', action);
+    bouton.title = action;
+    // Barre du navigateur mobile : même couleur que le papier du mode choisi
+    if (racine.dataset.theme) {
+      document.querySelectorAll('meta[name="theme-color"]').forEach((m) => { m.content = COULEURS[racine.dataset.theme]; });
+    }
+  };
+
+  bouton.addEventListener('click', () => {
+    const suivant = effectif() === 'dark' ? 'light' : 'dark';
+    racine.dataset.theme = suivant;
+    try { localStorage.setItem('nogues-theme', suivant); } catch (e) { /* stockage indisponible : le choix vaut pour cette page */ }
+    afficher();
+  });
+  systeme.addEventListener('change', afficher);
+  bouton.hidden = false;
+  afficher();
+})();
+
 /* Filtres de l'index des signaux (page Éditions). Sans JavaScript, tous les signaux restent affichés. */
 (() => {
   'use strict';

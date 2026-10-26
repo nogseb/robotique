@@ -15,8 +15,9 @@ data/
   historique.json          régénéré : URL des sources des 8 dernières éditions (dédoublonnage)
   glossaire.json           régénéré : mots de la semaine déjà définis
 static/                    feuille de style, script, polices (OFL), favicon, image de partage
-gabarits/chantier.svg      épure animée de l'en-tête (bras robotisé), insérée en ligne dans chaque édition
-outils/chantier.py         génère gabarits/chantier.svg : python3 outils/chantier.py > gabarits/chantier.svg
+gabarits/chantier-*.svg    épures animées des en-têtes, insérées en ligne : bras robotisé (éditions),
+                           robot mobile (Éditions), main robotisée (Glossaire), robot delta (Méthode)
+outils/chantier.py         régénère les quatre épures : python3 outils/chantier.py
 build.py                   validation et génération, bibliothèque standard Python uniquement
 docs/prompt-agent.md       prompt de production de l'agent (Manus.im)
 .github/workflows/         validation, génération et publication
@@ -48,6 +49,12 @@ python3 -m http.server 8000 --directory /tmp/apercu   # puis http://localhost:80
 | `/robotique/methode/` | Rubriques, échelle de maturité, sources, production, corrections |
 | `/robotique/flux.xml` | Flux RSS des éditions |
 | `/robotique/sitemap.xml` | Plan du site |
+
+## Affichage
+
+Le site suit le mode clair ou sombre de l'appareil. La bascule du menu impose l'autre mode ; le choix est mémorisé sur l'appareil (`localStorage`, clé `nogues-theme`, réutilisable par les autres pages de nogues.app). La feuille de style et le script sont appelés avec une empreinte de leur contenu (`?v=…`) : un navigateur ne garde jamais une ancienne version.
+
+Les épures animées sont en arrière-plan, sans effet sur la mise en page. Elles ne se jouent qu'une fois ; si l'appareil demande de réduire les animations, seul le dessin final s'affiche.
 
 ## Publication : secrets à créer
 

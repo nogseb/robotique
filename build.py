@@ -26,8 +26,9 @@ DATA = ROOT / "data"
 EDITIONS_DIR = DATA / "editions"
 STATIC = ROOT / "static"
 DIST = ROOT / "dist"
-# Épure animée de l'en-tête (générée par outils/chantier.py), insérée en ligne pour suivre les couleurs du thème
-CHANTIER = (ROOT / "gabarits" / "chantier.svg").read_text(encoding="utf-8").strip()
+# Épures animées des en-têtes (générées par outils/chantier.py), insérées en ligne pour suivre les couleurs du thème
+EPURES = {nom: (ROOT / "gabarits" / f"chantier-{nom}.svg").read_text(encoding="utf-8").strip()
+          for nom in ("edition", "editions", "glossaire", "methode")}
 
 
 def empreinte(nom):
@@ -352,6 +353,10 @@ LOGO = ('<svg class="logo" viewBox="0 0 120 120" aria-hidden="true" focusable="f
         '<path class="i" stroke-width="18" d="M38 66C38 53 48 46 61 46C74 46 84 54 84 68V104"/>'
         '<path class="ac" stroke-width="8" d="M29 16H93M29 6V26M93 6V26"/></g></svg>')
 
+ICONES_THEME = ('<svg class="ic-lune" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+                '<path d="M20 14.6A8.2 8.2 0 1 1 9.4 4a6.6 6.6 0 0 0 10.6 10.6Z"/></svg>'
+                '<svg class="ic-soleil" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/>'
+                '<path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>')
 NAV = [("", "Cette semaine"), ("editions/", "Éditions"), ("glossaire/", "Glossaire"), ("methode/", "Méthode")]
 
 
@@ -388,6 +393,7 @@ def page(titre, description, chemin, corps, actif=None, jsonld=None, indexable=T
 <link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="{BASE}flux.xml">
 <link rel="preload" href="{BASE}assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{BASE}assets/fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{{var t=localStorage.getItem("nogues-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 <link rel="stylesheet" href="{BASE}assets/veille.css?v={empreinte('veille.css')}">
 {ld}
 </head>
@@ -399,7 +405,10 @@ def page(titre, description, chemin, corps, actif=None, jsonld=None, indexable=T
     <span class="barre" aria-hidden="true">/</span>
     <a class="titre-site" href="{BASE}">Robotique</a>
   </div>
-  <nav aria-label="Navigation de la veille">{nav}</nav>
+  <div class="menu">
+    <nav aria-label="Navigation de la veille">{nav}</nav>
+    <button class="theme" type="button" data-bascule-theme hidden aria-label="Passer en mode sombre" title="Passer en mode sombre">{ICONES_THEME}</button>
+  </div>
 </header>
 <main id="contenu">
 {corps}
@@ -565,7 +574,7 @@ def ouverture(ed, niveau_titre="h1"):
     <{niveau_titre} class="titre-edition">Semaine {t(periode(ed['periode']['debut'], ed['periode']['fin']))}</{niveau_titre}>
     <p class="promesse">{t(TAGLINE)} Publié le {t(date_longue(ed['date_publication'], True))}, à lire en trois minutes.</p>
   </div>
-  {CHANTIER}
+  {EPURES['edition']}
   <div class="ouverture-essentiel">
     <h2 class="titre-essentiel">L'essentiel</h2>
     <ul class="essentiel">{ess}</ul>
@@ -637,9 +646,10 @@ def page_editions(editions):
         f'<button type="button" data-valeur="{k}" aria-pressed="false">{t(v[0])}</button>' for k, v in RUBRIQUES.items())
     boutons_m = '<button type="button" data-valeur="" aria-pressed="true">Toutes</button>' + "".join(
         f'<button type="button" data-valeur="{k}" aria-pressed="false">{t(v[1])}</button>' for k, v in MATURITES.items())
-    corps = f"""<section class="ouverture court wrap">
+    corps = f"""<section class="ouverture court epure wrap">
   <h1 class="titre-edition">Toutes les éditions</h1>
   <p class="promesse">Une édition chaque lundi depuis le {t(date_longue(editions[-1]['date_publication']))}. Les signaux de toutes les semaines peuvent aussi être filtrés plus bas.</p>
+  {EPURES['editions']}
 </section>
 <section class="wrap ruled liste-editions" aria-label="Éditions">
   <ul>{liste}</ul>
@@ -683,9 +693,10 @@ def page_glossaire(editions):
             {"@type": "DefinedTerm", "name": m["terme"], "description": m["definition"],
              "url": f"{SITE}glossaire/#{m['slug']}"} for m in mots],
     }
-    corps = f"""<section class="ouverture court wrap">
+    corps = f"""<section class="ouverture court epure wrap">
   <h1 class="titre-edition">Glossaire</h1>
   <p class="promesse">Les mots de la robotique expliqués simplement, un par semaine. {pluriel(len(mots), "mot")} pour l'instant.</p>
+  {EPURES['glossaire']}
 </section>
 <section class="wrap ruled glossaire">
   <dl>{entrees}</dl>
@@ -700,9 +711,10 @@ def page_methode():
         f'<li class="m{n}"><span class="nom">{jauge(n, lib)}{t(lib)}</span><span>{t(defi)}</span></li>'
         for n, lib, defi in MATURITES.values())
     rubs = "".join(f"<li><strong>{t(n)}.</strong> {t(q)}</li>" for n, q, _ in RUBRIQUES.values())
-    corps = f"""<section class="ouverture court wrap">
+    corps = f"""<section class="ouverture court epure wrap">
   <h1 class="titre-edition">Comment cette veille est faite</h1>
   <p class="promesse">La robotique produit beaucoup plus d'annonces que de robots en service. Cette veille trie, vérifie et classe chaque information pour que l'on sache, en trois minutes, ce qui a vraiment avancé.</p>
+  {EPURES['methode']}
 </section>
 <section class="wrap ruled prose">
   <h2>Sept signaux au plus, chaque lundi</h2>

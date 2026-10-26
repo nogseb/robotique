@@ -27,8 +27,21 @@
   --gutter: clamp(1rem, 4vw, 3rem);
   color-scheme: light;
 }
+/* Mode sombre : réglage de l'appareil par défaut, ou choix fait avec la bascule du menu (attribut data-theme, mémorisé) */
+:root[data-theme="dark"] {
+  --paper: #12161C;
+  --ink: #E6EAEF;
+  --muted: #9AA6B4;
+  --rule: #2C3440;
+  --accent: #8EA6FF;
+  --accent-soft: #1E2847;
+  --card: #181D25;
+  --m1: #232C45; --m2: #34477F; --m3: #4F67BE; --m4: #6F88E6; --m5: #8EA6FF;
+  --trait: #4D5A6B; --trait-fin: #313B48;
+  color-scheme: dark;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper: #12161C;
     --ink: #E6EAEF;
     --muted: #9AA6B4;
@@ -82,6 +95,14 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 .top nav a { color: var(--muted); text-decoration: none; padding: 0.15rem 0; border-bottom: 2px solid transparent; }
 .top nav a:hover { color: var(--ink); }
 .top nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+.menu { display: flex; align-items: center; gap: 1.25rem; }
+/* Bascule clair / sombre : affichée seulement si JavaScript est actif ; l'icône montre le mode proposé */
+.theme { display: inline-grid; place-items: center; flex: none; width: 2.1rem; height: 2.1rem; padding: 0; border: 1px solid var(--rule); border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; }
+.theme:hover { color: var(--ink); border-color: var(--muted); }
+.theme[hidden] { display: none; }
+.theme svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.theme .ic-soleil, .theme.sombre .ic-lune { display: none; }
+.theme.sombre .ic-soleil { display: block; }
 
 /* Ouverture de l'édition */
 .ouverture { padding-top: clamp(1.75rem, 5vw, 3.5rem); }
@@ -107,12 +128,14 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 .essentiel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.6rem; height: 2px; background: var(--accent); }
 .ouverture.court .promesse { max-width: 60ch; }
 
-/* Épure d'ouverture : un bras robotisé se construit comme un dessin technique, une seule fois au chargement.
-   Lignes de construction et cadres en pointillés (bleu), puis tracé des pièces, articulations, axes et cote.
-   SVG en ligne généré par outils/chantier.py. Il est en arrière-plan : position absolue, derrière le texte,
-   sans aucun effet sur la mise en page. Sans animation, seul le dessin final s'affiche. */
+/* Épures d'ouverture : un robot se construit comme un dessin technique, une seule fois au chargement.
+   Bras robotisé (éditions), robot mobile (Éditions), main robotisée (Glossaire), robot delta (Méthode).
+   Lignes de construction et cadres en pointillés (bleu), tracé des pièces, articulations, axes et cote,
+   puis un dernier mouvement propre à chaque robot. SVG en ligne générés par outils/chantier.py.
+   En arrière-plan : position absolue, derrière le texte, sans aucun effet sur la mise en page.
+   Sans animation, seul le dessin final s'affiche. */
 .ouverture { position: relative; }
-.ouverture > div { position: relative; z-index: 1; }
+.ouverture > :not(.chantier) { position: relative; z-index: 1; }
 .chantier { position: absolute; z-index: 0; top: 0.4rem; right: var(--gutter); width: min(8.5rem, 34%); height: auto; opacity: 0.45; pointer-events: none; overflow: visible; }
 .chantier path, .chantier circle { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .chantier .plein { fill: var(--paper); }
@@ -128,12 +151,25 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 .ch-e { stroke: var(--trait-fin); stroke-width: 1; stroke-dasharray: 3 7; animation: ch-apparaitre 1.2s ease 3s both; }
 .ch-a path { stroke: var(--trait-fin); stroke-width: 0.9; stroke-dasharray: 14 5 3 5; animation: ch-apparaitre 1s ease 3.2s both; }
 .ch-c { stroke: var(--accent); stroke-width: 1.5; opacity: 0.5; stroke-dasharray: 1; animation: ch-tracer 0.8s ease-out 3.5s both; }
+/* Derniers mouvements : les roues tournent et le lidar balaie ; les doigts s'écartent et les capteurs s'allument ; le colis arrive sous la ventouse */
+.ch-roue { transform-box: fill-box; transform-origin: center; animation: ch-tourner 1.8s cubic-bezier(.45, 0, .2, 1) 3.8s both; }
+.ch-ondes path { stroke: var(--accent); stroke-width: 1.4; opacity: 0.45; transform-box: view-box; transform-origin: var(--o); animation: ch-onde 1.2s ease-out var(--d) both; }
+.ch-ecart { transform-box: view-box; transform-origin: var(--o); transform: rotate(var(--r)); animation: ch-ecarter 0.8s ease-in-out 4s both; }
+.chantier .capteur { fill: var(--accent); stroke: none; transform-box: fill-box; transform-origin: center; animation: ch-poser 0.45s cubic-bezier(.3, .6, .2, 1.4) var(--d) both; }
+.ch-anneau { stroke: var(--accent); stroke-width: 1.2; opacity: 0; transform-box: fill-box; transform-origin: center; animation: ch-anneau 1.3s ease-out var(--d) both; }
+.ch-colis path { stroke: var(--trait); stroke-width: 2.2; }
+.ch-colis { animation: ch-glisser 1.1s cubic-bezier(.3, .6, .2, 1) 3.7s both; }
 @keyframes ch-guide { 0% { stroke-dashoffset: 1; opacity: 0.45; } 22% { stroke-dashoffset: 0; opacity: 0.45; } 75% { stroke-dashoffset: 0; opacity: 0.45; } 100% { stroke-dashoffset: 0; opacity: 0; } }
 @keyframes ch-cadre { 0% { opacity: 0; } 15% { opacity: 0.5; } 65% { opacity: 0.5; } 100% { opacity: 0; } }
 @keyframes ch-tracer { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes ch-serrer { from { transform: translateX(0); } }
 @keyframes ch-poser { from { transform: scale(0); } }
 @keyframes ch-apparaitre { from { opacity: 0; } }
+@keyframes ch-tourner { from { transform: rotate(-270deg); } }
+@keyframes ch-onde { 0% { opacity: 0; transform: scale(0.5); } 45% { opacity: 0.9; } 100% { opacity: 0.45; transform: scale(1); } }
+@keyframes ch-ecarter { from { transform: rotate(0deg); } }
+@keyframes ch-anneau { 0% { opacity: 0; transform: scale(0.4); } 10% { opacity: 0.9; } 100% { opacity: 0; transform: scale(1.8); } }
+@keyframes ch-glisser { from { transform: translateX(-120px); opacity: 0; } 20% { opacity: 1; } }
 
 /* Échelle de maturité : une cote de dessin technique */
 .echelle .tete { max-width: var(--measure); }
@@ -307,6 +343,10 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
   .ouverture:not(.court) .ouverture-titre { max-width: 58%; }
   .ouverture:not(.court) .titre-edition { max-width: 14ch; font-size: clamp(2.6rem, 4.8vw, 4.3rem); }
   .ouverture:not(.court) .titre-essentiel { margin-top: 2.25rem; }
+  /* Pages Éditions, Glossaire et Méthode : en-tête plus court, épure plus petite */
+  .ouverture.court .chantier { top: 0.5rem; width: min(16rem, 26%); }
+  .ouverture.epure .titre-edition { max-width: min(18ch, 64%); }
+  .ouverture.epure .promesse { max-width: min(60ch, 64%); }
 }
 @media (min-width: 1080px) {
   .rubriques { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -324,7 +364,8 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
   .ligne { grid-template-columns: 1fr; padding: 0.9rem 0; }
 }
 @media (max-width: 760px) {
-  .top { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .top { position: relative; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .theme { position: absolute; top: 1.05rem; right: var(--gutter); }
   /* L'échelle devient verticale : la cote descend */
   .cote { grid-template-columns: 1fr; gap: 1.6rem; margin-top: 1.75rem; }
   .cote::before { left: var(--axe); right: auto; top: 0.6rem; bottom: 0.4rem; width: 2px; height: auto; transform-origin: center top; animation-name: tracer-v; }
@@ -346,6 +387,6 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
   .chantier, .chantier * { animation: none !important; }
 }
 @media print {
-  .top nav, .pied .liens, .evitement, .chantier { display: none; }
+  .top nav, .theme, .pied .liens, .evitement, .chantier { display: none; }
   .signal { break-inside: avoid; }
 }
