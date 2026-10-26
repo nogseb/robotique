@@ -109,9 +109,11 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 
 /* Épure d'ouverture : un bras robotisé se construit comme un dessin technique, une seule fois au chargement.
    Lignes de construction et cadres en pointillés (bleu), puis tracé des pièces, articulations, axes et cote.
-   SVG en ligne généré par outils/chantier.py, placé à côté du titre et jamais sous le texte ;
-   sans animation, seul le dessin final s'affiche. */
-.chantier { display: block; width: min(17rem, 70%); height: auto; margin: 1.5rem 0 0 auto; pointer-events: none; overflow: visible; }
+   SVG en ligne généré par outils/chantier.py. Il est en arrière-plan : position absolue, derrière le texte,
+   sans aucun effet sur la mise en page. Sans animation, seul le dessin final s'affiche. */
+.ouverture { position: relative; }
+.ouverture > div { position: relative; z-index: 1; }
+.chantier { position: absolute; z-index: 0; top: 0.4rem; right: var(--gutter); width: min(8.5rem, 34%); height: auto; opacity: 0.45; pointer-events: none; overflow: visible; }
 .chantier path, .chantier circle { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .chantier .plein { fill: var(--paper); }
 .ch-g path { stroke: var(--accent); stroke-width: 0.8; stroke-dasharray: 1; opacity: 0; animation: ch-guide 4.6s cubic-bezier(.3, .6, .2, 1) var(--d) both; }
@@ -300,12 +302,10 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 
 /* Mise en page selon la largeur */
 @media (min-width: 700px) {
-  /* Dès la tablette : le titre et l'épure côte à côte, l'essentiel dessous */
-  .ouverture:not(.court) { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-areas: "titre dessin" "essentiel essentiel"; gap: 0 clamp(2rem, 4vw, 4rem); align-items: end; padding-bottom: clamp(2rem, 4vw, 3rem); }
-  .ouverture-titre { grid-area: titre; }
+  /* Dès la tablette, le texte de l'ouverture laisse la droite libre : l'épure s'y loge sans le recouvrir */
+  .chantier { top: 0.75rem; width: min(22rem, 38%); opacity: 1; }
+  .ouverture:not(.court) .ouverture-titre { max-width: 58%; }
   .ouverture:not(.court) .titre-edition { max-width: 14ch; font-size: clamp(2.6rem, 4.8vw, 4.3rem); }
-  .ouverture:not(.court) .chantier { grid-area: dessin; width: 100%; max-width: 29rem; margin: 0 0 0 auto; }
-  .ouverture-essentiel { grid-area: essentiel; }
   .ouverture:not(.court) .titre-essentiel { margin-top: 2.25rem; }
 }
 @media (min-width: 1080px) {
@@ -322,10 +322,6 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 }
 @media (max-width: 860px) {
   .ligne { grid-template-columns: 1fr; padding: 0.9rem 0; }
-}
-@media (max-width: 699px) {
-  /* Sur mobile, l'épure reste discrète entre la promesse et l'essentiel */
-  .chantier { width: min(9.5rem, 45%); margin: 0.5rem 0 -0.75rem auto; }
 }
 @media (max-width: 760px) {
   .top { flex-direction: column; align-items: flex-start; gap: 0.6rem; }

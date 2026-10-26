@@ -11,6 +11,7 @@ Une erreur de validation arrête la génération : rien n'est publié.
 """
 
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -27,6 +28,11 @@ STATIC = ROOT / "static"
 DIST = ROOT / "dist"
 # Épure animée de l'en-tête (générée par outils/chantier.py), insérée en ligne pour suivre les couleurs du thème
 CHANTIER = (ROOT / "gabarits" / "chantier.svg").read_text(encoding="utf-8").strip()
+
+
+def empreinte(nom):
+    """Empreinte courte du contenu d'un fichier statique, ajoutée à son URL : chaque modification change l'adresse et contourne le cache."""
+    return hashlib.sha256((STATIC / nom).read_bytes()).hexdigest()[:10]
 
 BASE = "/robotique/"
 SITE = "https://nogues.app/robotique/"
@@ -382,7 +388,7 @@ def page(titre, description, chemin, corps, actif=None, jsonld=None, indexable=T
 <link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="{BASE}flux.xml">
 <link rel="preload" href="{BASE}assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{BASE}assets/fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{BASE}assets/veille.css">
+<link rel="stylesheet" href="{BASE}assets/veille.css?v={empreinte('veille.css')}">
 {ld}
 </head>
 <body>
@@ -402,7 +408,7 @@ def page(titre, description, chemin, corps, actif=None, jsonld=None, indexable=T
   <p>Une veille de {AUTHOR}, publiée chaque lundi sur nogues.app. Les éditions sont préparées par un agent d'intelligence artificielle, publiées automatiquement, puis vérifiées par un humain dans la journée ; chaque correction est signalée.</p>
   <p class="liens"><a href="{BASE}methode/">Comment cette veille est faite</a><a href="{BASE}glossaire/">Glossaire</a><a href="{BASE}flux.xml">Flux RSS</a><a href="{REPO}/issues">Signaler une erreur</a><a href="https://nogues.app/">Autres expériences sur nogues.app</a></p>
 </footer>
-<script src="{BASE}assets/veille.js" defer></script>
+<script src="{BASE}assets/veille.js?v={empreinte('veille.js')}" defer></script>
 </body>
 </html>
 """

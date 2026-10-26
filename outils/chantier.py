@@ -34,7 +34,8 @@ E = (190, 380); C = (330, 200); P = (480, 240)   # épaule, coude, poignet
 L = 'pathLength="1"'
 out = []
 w = out.append
-w('<svg class="chantier" viewBox="0 0 600 520" preserveAspectRatio="xMaxYMax meet" aria-hidden="true" focusable="false">')
+# Les attributs width, height, fill et stroke ne servent que de repli si la feuille de style manque : le CSS les remplace.
+w('<svg class="chantier" viewBox="0 0 600 520" width="240" height="208" preserveAspectRatio="xMaxYMax meet" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" focusable="false">')
 # 1. Lignes de construction
 w('<g class="ch-g">')
 for i, d in enumerate(["M20 200H590", "M20 380H590", "M190 30V500", "M480 30V500"]):
