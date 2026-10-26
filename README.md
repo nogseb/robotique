@@ -15,6 +15,8 @@ data/
   historique.json          régénéré : URL des sources des 8 dernières éditions (dédoublonnage)
   glossaire.json           régénéré : mots de la semaine déjà définis
 static/                    feuille de style, script, polices (OFL), favicon, image de partage
+gabarits/chantier.svg      épure animée de l'en-tête (bras robotisé), insérée en ligne dans chaque édition
+outils/chantier.py         génère gabarits/chantier.svg : python3 outils/chantier.py > gabarits/chantier.svg
 build.py                   validation et génération, bibliothèque standard Python uniquement
 docs/prompt-agent.md       prompt de production de l'agent (Manus.im)
 .github/workflows/         validation, génération et publication

@@ -248,4 +248,4 @@ Les corrections sont faites par Sébastien ou à sa demande. Chacune modifie le 
 
 Le site est généré par `build.py` à partir de `data/editions/`. Il comprend l'édition de la semaine, une page par édition, l'index filtrable de tous les signaux, le glossaire, la page Méthode, un flux RSS et un plan de site.
 
-Ne modifie ni `build.py`, ni `static/`, ni `.github/workflows/`. Si une évolution du site te paraît nécessaire, propose-la dans le ticket.
+Ne modifie ni `build.py`, ni `static/`, ni `gabarits/`, ni `outils/`, ni `.github/workflows/`. Si une évolution du site te paraît nécessaire, propose-la dans le ticket.

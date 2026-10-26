@@ -25,6 +25,8 @@ DATA = ROOT / "data"
 EDITIONS_DIR = DATA / "editions"
 STATIC = ROOT / "static"
 DIST = ROOT / "dist"
+# Épure animée de l'en-tête (générée par outils/chantier.py), insérée en ligne pour suivre les couleurs du thème
+CHANTIER = (ROOT / "gabarits" / "chantier.svg").read_text(encoding="utf-8").strip()
 
 BASE = "/robotique/"
 SITE = "https://nogues.app/robotique/"
@@ -557,6 +559,7 @@ def ouverture(ed, niveau_titre="h1"):
     <{niveau_titre} class="titre-edition">Semaine {t(periode(ed['periode']['debut'], ed['periode']['fin']))}</{niveau_titre}>
     <p class="promesse">{t(TAGLINE)} Publié le {t(date_longue(ed['date_publication'], True))}, à lire en trois minutes.</p>
   </div>
+  {CHANTIER}
   <div class="ouverture-essentiel">
     <h2 class="titre-essentiel">L'essentiel</h2>
     <ul class="essentiel">{ess}</ul>

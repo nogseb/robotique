@@ -19,6 +19,8 @@
   --card: #F8FAFB;
   /* Échelle de maturité : du plus clair (recherche) au plus franc (déployé) */
   --m1: #DDE4FB; --m2: #B4C2F4; --m3: #7E95EA; --m4: #4D69E0; --m5: #2346D8;
+  /* Épure d'ouverture : trait des pièces, trait fin des axes */
+  --trait: #9DAAB8; --trait-fin: #C3CCD6;
   --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
   --text: "Literata", Georgia, "Times New Roman", serif;
   --measure: 66ch;
@@ -35,6 +37,7 @@
     --accent-soft: #1E2847;
     --card: #181D25;
     --m1: #232C45; --m2: #34477F; --m3: #4F67BE; --m4: #6F88E6; --m5: #8EA6FF;
+    --trait: #4D5A6B; --trait-fin: #313B48;
     color-scheme: dark;
   }
 }
@@ -103,6 +106,32 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 }
 .essentiel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.6rem; height: 2px; background: var(--accent); }
 .ouverture.court .promesse { max-width: 60ch; }
+
+/* Épure d'ouverture : un bras robotisé se construit comme un dessin technique, une seule fois au chargement.
+   Lignes de construction et cadres en pointillés (bleu), puis tracé des pièces, articulations, axes et cote.
+   SVG en ligne généré par outils/chantier.py, placé à côté du titre et jamais sous le texte ;
+   sans animation, seul le dessin final s'affiche. */
+.chantier { display: block; width: min(17rem, 70%); height: auto; margin: 1.5rem 0 0 auto; pointer-events: none; overflow: visible; }
+.chantier path, .chantier circle { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.chantier .plein { fill: var(--paper); }
+.ch-g path { stroke: var(--accent); stroke-width: 0.8; stroke-dasharray: 1; opacity: 0; animation: ch-guide 4.6s cubic-bezier(.3, .6, .2, 1) var(--d) both; }
+.ch-f path { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 5 5; opacity: 0; animation: ch-cadre 3.4s ease var(--d) both; }
+.ch-t path { stroke: var(--trait); stroke-width: 2.2; stroke-dasharray: 1; animation: ch-tracer 0.9s cubic-bezier(.3, .6, .2, 1) var(--d) both; }
+.ch-mors .mg { transform: translateX(3px); animation: ch-tracer 0.9s cubic-bezier(.3, .6, .2, 1) var(--d) both, ch-serrer 0.5s ease-in-out 4.3s both; }
+.ch-mors .md { transform: translateX(-3px); animation: ch-tracer 0.9s cubic-bezier(.3, .6, .2, 1) var(--d) both, ch-serrer 0.5s ease-in-out 4.3s both; }
+.ch-j > g, .ch-j .boulon { transform-box: fill-box; transform-origin: center; animation: ch-poser 0.45s cubic-bezier(.3, .6, .2, 1.4) var(--d) both; }
+.ch-j .plein { stroke: var(--trait); stroke-width: 2.2; }
+.ch-j .axe { fill: var(--accent); opacity: 0.55; }
+.ch-j .boulon { fill: var(--trait); }
+.ch-e { stroke: var(--trait-fin); stroke-width: 1; stroke-dasharray: 3 7; animation: ch-apparaitre 1.2s ease 3s both; }
+.ch-a path { stroke: var(--trait-fin); stroke-width: 0.9; stroke-dasharray: 14 5 3 5; animation: ch-apparaitre 1s ease 3.2s both; }
+.ch-c { stroke: var(--accent); stroke-width: 1.5; opacity: 0.5; stroke-dasharray: 1; animation: ch-tracer 0.8s ease-out 3.5s both; }
+@keyframes ch-guide { 0% { stroke-dashoffset: 1; opacity: 0.45; } 22% { stroke-dashoffset: 0; opacity: 0.45; } 75% { stroke-dashoffset: 0; opacity: 0.45; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes ch-cadre { 0% { opacity: 0; } 15% { opacity: 0.5; } 65% { opacity: 0.5; } 100% { opacity: 0; } }
+@keyframes ch-tracer { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes ch-serrer { from { transform: translateX(0); } }
+@keyframes ch-poser { from { transform: scale(0); } }
+@keyframes ch-apparaitre { from { opacity: 0; } }
 
 /* Échelle de maturité : une cote de dessin technique */
 .echelle .tete { max-width: var(--measure); }
@@ -270,12 +299,20 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 .pied .liens { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; }
 
 /* Mise en page selon la largeur */
+@media (min-width: 700px) {
+  /* Dès la tablette : le titre et l'épure côte à côte, l'essentiel dessous */
+  .ouverture:not(.court) { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-areas: "titre dessin" "essentiel essentiel"; gap: 0 clamp(2rem, 4vw, 4rem); align-items: end; padding-bottom: clamp(2rem, 4vw, 3rem); }
+  .ouverture-titre { grid-area: titre; }
+  .ouverture:not(.court) .titre-edition { max-width: 14ch; font-size: clamp(2.6rem, 4.8vw, 4.3rem); }
+  .ouverture:not(.court) .chantier { grid-area: dessin; width: 100%; max-width: 29rem; margin: 0 0 0 auto; }
+  .ouverture-essentiel { grid-area: essentiel; }
+  .ouverture:not(.court) .titre-essentiel { margin-top: 2.25rem; }
+}
 @media (min-width: 1080px) {
   .rubriques { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  /* Sur grand écran, l'essentiel se lit à côté du titre : l'échelle remonte dans le premier écran */
-  .ouverture:not(.court) { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 7fr); gap: 4rem; align-items: start; padding-bottom: clamp(2rem, 4vw, 3rem); }
-  .ouverture:not(.court) .titre-edition { max-width: none; font-size: clamp(2.6rem, 4.3vw, 3.9rem); }
-  .ouverture:not(.court) .titre-essentiel { margin-top: 0.45rem; }
+  /* Sur grand écran, l'essentiel passe en trois colonnes : l'échelle remonte dans le premier écran */
+  .ouverture:not(.court) .essentiel { max-width: none; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.5rem; }
+  .ouverture:not(.court) .essentiel li { font-size: 1.14rem; }
 }
 @media (min-width: 700px) and (max-width: 1079px) {
   .cartes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -285,6 +322,10 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 }
 @media (max-width: 860px) {
   .ligne { grid-template-columns: 1fr; padding: 0.9rem 0; }
+}
+@media (max-width: 699px) {
+  /* Sur mobile, l'épure reste discrète entre la promesse et l'essentiel */
+  .chantier { width: min(9.5rem, 45%); margin: 0.5rem 0 -0.75rem auto; }
 }
 @media (max-width: 760px) {
   .top { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
@@ -306,8 +347,9 @@ main > section { padding-top: clamp(2.25rem, 5vw, 3.75rem); padding-bottom: clam
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .cote::before, .cote::after, .station .point { animation: none; }
+  .chantier, .chantier * { animation: none !important; }
 }
 @media print {
-  .top nav, .pied .liens, .evitement { display: none; }
+  .top nav, .pied .liens, .evitement, .chantier { display: none; }
   .signal { break-inside: avoid; }
 }
