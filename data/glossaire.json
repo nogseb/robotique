@@ -1,5 +1,11 @@
 [
   {
+    "terme": "Apprentissage par renforcement",
+    "slug": "apprentissage-par-renforcement",
+    "definition": "Une méthode où l'IA apprend par essais et erreurs, en recevant une récompense quand elle réussit. Eka l'utilise en simulation : son robot s'exerce des milliers d'heures dans un monde virtuel avant de toucher un objet réel.",
+    "semaine": "2026-S43"
+  },
+  {
     "terme": "VLA (vision-langage-action)",
     "slug": "vla",
     "definition": "Un modèle d'IA qui reçoit des images et une consigne en langage courant, puis produit directement les mouvements du robot. C'est ce type de modèle que Physical Intelligence propose désormais en location.",

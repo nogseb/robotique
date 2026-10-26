@@ -1,0 +1,248 @@
+{
+  "numero": 1,
+  "semaine_iso": "2026-S43",
+  "periode": { "debut": "2026-10-19", "fin": "2026-10-25" },
+  "date_publication": "2026-10-26",
+  "essentiel": [
+    "Tesla a lancé la production d'Optimus en Californie, mais sans client annoncé : le robot reste pour l'instant au stade de la démonstration.",
+    "Deux start-up lèvent 240 millions de dollars pour donner un cerveau aux robots : l'une les forme avec des vidéos humaines, l'autre par le toucher.",
+    "La Chine a déjà produit plus de robots industriels en neuf mois qu'en toute l'année 2025 : 794 781 fin septembre."
+  ],
+  "signaux": [
+    {
+      "id": "2026-S43-01",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "Tesla Optimus",
+      "titre": "Tesla lance la production de son robot humanoïde Optimus en Californie",
+      "fait": "Les premiers Optimus de qualité production sortent de l'usine de Fremont, selon Tesla. Elon Musk vise 20 000 robots par semaine fin 2027.",
+      "portee": "Musk prévient que la montée en cadence sera lente et que l'IA demande encore beaucoup de travail. Aucun client extérieur n'est annoncé.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["Tesla"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-21",
+      "sources": [
+        {
+          "titre": "Tesla starts Optimus robot production in California as profit falls 43%",
+          "editeur": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/21/tesla-stars-optimus-robot-production-in-california-as-profit-falls-43/",
+          "date": "2026-10-21",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S43-02",
+      "rubrique": "materiel",
+      "rubrique_secondaire": "ia",
+      "repere": "Neura 4NE1 Gen 4",
+      "titre": "L'allemand Neura dévoile un humanoïde 20 % plus léger à Munich",
+      "fait": "Le 4NE1 Gen 4 a des réflexes intégrés à chaque bras et chaque jambe, et des mains plus précises. Neura dit préparer sa production en série.",
+      "portee": "Présenté à l'ouverture d'un centre de plus de 2 300 m² où des robots apprennent des gestes industriels, avec l'université de Munich.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "europe",
+      "horizon": "1-3-ans",
+      "acteurs": ["Neura Robotics", "Université technique de Munich"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-22",
+      "sources": [
+        {
+          "titre": "TUM RoboGym Opens in Munich with 4NE1 Gen 4",
+          "editeur": "Neura Robotics",
+          "url": "https://neura-robotics.com/tum-robogym-munich-4ne1-gen4-launch/",
+          "date": "2026-10-22",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S43-03",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "Eka Robotics",
+      "titre": "Eka lève 150 M USD pour des robots qui sentent ce qu'ils saisissent",
+      "fait": "Son IA combine la vue et la force ressentie au contact d'un objet. Fondée par des anciens du MIT et de DeepMind, la start-up vaut 1,45 milliard de dollars.",
+      "portee": "Selon Eka, son robot saisit 1 500 objets par heure, contre 600 pour un humain. Des essais discrets sont en cours chez des industriels.",
+      "type": "financement",
+      "maturite": "pilote",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["Eka Robotics"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-20",
+      "sources": [
+        {
+          "titre": "Eka is worth $1.45B thanks to a physical AI model that has experts raving",
+          "editeur": "TechCrunch",
+          "url": "https://techcrunch.com/?p=3179067",
+          "date": "2026-10-20",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S43-04",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "Dream Labs",
+      "titre": "Dream Labs loue le cerveau de ses robots 3 dollars de l'heure",
+      "fait": "La start-up, qui lève 90 millions de dollars, ouvre à tous son modèle Dream-1, entraîné sur des vidéos de personnes qui rangent ou emballent.",
+      "portee": "Il pilote des robots à deux bras vendus environ 2 000 à 10 000 dollars. Il sait déjà saisir, déposer et plier du linge, selon l'entreprise.",
+      "type": "produit",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["Dream Labs"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-19",
+      "sources": [
+        {
+          "titre": "Dream Labs raises $90M to help build more intelligent robots with simple video feeds",
+          "editeur": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/10/19/dream-labs-raises-90m-to-help-build-more-intelligent-robots-with-simple-video-feeds/",
+          "date": "2026-10-19",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S43-05",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Digit chez AGCO",
+      "titre": "AGCO, géant des machines agricoles, va tester le robot humanoïde Digit",
+      "fait": "Accord signé le 20 octobre avec Agility Robotics : dès 2027, Digit triera des pièces et rangera des bacs dans l'usine de moissonneuses du Kansas.",
+      "portee": "Des tâches simples de manutention, pas d'assemblage. Ni le nombre de robots ni les objectifs chiffrés ne sont communiqués.",
+      "type": "partenariat",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["AGCO", "Agility Robotics"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-10-20",
+      "sources": [
+        {
+          "titre": "AGCO's Humanoid Robot Pilot Puts the Focus on Factory Work, Not Robot Demos",
+          "editeur": "A3",
+          "url": "https://www.automate.org/robotics/industry-insights/agcos-humanoid-robot-pilot-puts-the-focus-on-factory-work-not-robot-demos",
+          "date": "2026-10-21",
+          "fiabilite": "presse"
+        },
+        {
+          "titre": "AGCO to deploy Agility Digit humanoid in Kansas factory",
+          "editeur": "The Robot Report",
+          "url": "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/",
+          "date": "2026-10-21",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S43-06",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "ZAP Surgical",
+      "titre": "ZAP Surgical lève 36 M USD pour traiter le cerveau sans incision",
+      "fait": "Son appareil robotisé envoie des faisceaux de radiation vers une cible dans le cerveau, sous de multiples angles et sans ouvrir le crâne.",
+      "portee": "L'entreprise a livré son 50e appareil et revendique près de 10 000 patients traités : un robot déjà au travail, loin des démonstrations.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "monde",
+      "horizon": "moins-1-an",
+      "acteurs": ["ZAP Surgical", "Catalio Capital Management"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-19",
+      "sources": [
+        {
+          "titre": "ZAP Surgical Secures $36 Million Led by Catalio Capital Management to Scale Non-Invasive Brain Surgery",
+          "editeur": "ZAP Surgical",
+          "url": "https://zapsurgical.com/news/zap-surgical-secures-36-million-led-by-catalio-capital-management/",
+          "date": "2026-10-19",
+          "fiabilite": "primaire"
+        }
+      ]
+    }
+  ],
+  "chiffre": {
+    "valeur": "794 781",
+    "libelle": "robots industriels produits en Chine de janvier à septembre 2026",
+    "contexte": "29 % de plus qu'un an plus tôt, et déjà davantage qu'en toute l'année 2025 (773 074), selon le bureau national des statistiques chinois. Il s'agit de robots fabriqués, pas installés.",
+    "sources": [
+      {
+        "titre": "Industrial Production Operation in September 2026",
+        "editeur": "Bureau national des statistiques de Chine",
+        "url": "https://www.stats.gov.cn/english/PressRelease/202610/t20261020_1965665.html",
+        "date": "2026-10-20",
+        "fiabilite": "primaire"
+      },
+      {
+        "titre": "China's industrial robot output accelerates as factories ramp up deployment",
+        "editeur": "South China Morning Post",
+        "url": "https://www.scmp.com/tech/tech-trends/article/3346775/chinas-industrial-robot-output-accelerates-factories-ramp-deployment",
+        "date": "2026-03-16",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "cas_usage": {
+    "titre": "Marine américaine : des robots grimpeurs pour inspecter les navires",
+    "entreprise": "La marine des États-Unis, équipée par Gecko Robotics, dont le contrat a été quadruplé le 20 octobre, jusqu'à 300 millions de dollars.",
+    "tache_robotisee": "L'inspection des coques, ponts et soudures par des robots qui grimpent aux parois, des drones et des capteurs.",
+    "reste_manuel": "Les réparations : les données repèrent les défauts pour que les équipes planifient les travaux avant la cale sèche.",
+    "resultats_annonces": "Jusqu'à 8 millions de dollars d'économies possibles par navire, et des inspections ramenées de plusieurs mois à quelques jours, selon Gecko.",
+    "a_retenir": "Le robot ne répare rien : il mesure, et c'est la donnée qui fait gagner du temps.",
+    "sources": [
+      {
+        "titre": "US Navy, Gecko Robotics surge AI maintenance contract to $300M",
+        "editeur": "Defense News",
+        "url": "https://defensenews.com/news/your-navy/2026/10/20/us-navy-gecko-robotics-surge-ai-maintenance-contract-to-300m",
+        "date": "2026-10-20",
+        "fiabilite": "presse"
+      },
+      {
+        "titre": "Gecko Robotics quadruples U.S. Navy contract to $300M to support military readiness",
+        "editeur": "Robotics 24/7",
+        "url": "https://www.robotics247.com/article/gecko-robotics-quadruples-u.s-navy-contract-to-300m-to-support-military-readiness",
+        "date": "2026-10-20",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "agenda": [
+    {
+      "debut": "2026-10-27",
+      "fin": "2026-10-28",
+      "evenement": "ROSCon Spain",
+      "lieu": "Valence, Espagne",
+      "pourquoi": "Les développeurs de ROS, le logiciel libre qui fait tourner une grande partie des robots, se retrouvent au plus près de la France.",
+      "url": "https://roscon.org.es/roscon2026/ROSConES2026.html"
+    },
+    {
+      "debut": "2026-11-03",
+      "fin": "2026-11-03",
+      "evenement": "ROSCon Italy",
+      "lieu": "Bologne, Italie",
+      "pourquoi": "L'édition italienne de la même conférence, une journée de présentations techniques.",
+      "url": "https://roscon.ros.org/it/2026/"
+    },
+    {
+      "debut": "2026-11-09",
+      "fin": "2026-11-12",
+      "evenement": "CoRL 2026",
+      "lieu": "Austin, États-Unis",
+      "pourquoi": "La principale conférence scientifique sur l'apprentissage des robots.",
+      "url": "https://2026.corl.org/"
+    }
+  ],
+  "mot_de_la_semaine": {
+    "terme": "Apprentissage par renforcement",
+    "slug": "apprentissage-par-renforcement",
+    "definition": "Une méthode où l'IA apprend par essais et erreurs, en recevant une récompense quand elle réussit. Eka l'utilise en simulation : son robot s'exerce des milliers d'heures dans un monde virtuel avant de toucher un objet réel.",
+    "signal_lie": "2026-S43-03"
+  },
+  "errata": []
+}

@@ -1,5 +1,16 @@
 [
   {
+    "numero": 1,
+    "semaine_iso": "2026-S43",
+    "date_publication": "2026-10-26",
+    "url": "https://nogues.app/robotique/2026-S43/",
+    "essentiel": [
+      "Tesla a lancé la production d'Optimus en Californie, mais sans client annoncé : le robot reste pour l'instant au stade de la démonstration.",
+      "Deux start-up lèvent 240 millions de dollars pour donner un cerveau aux robots : l'une les forme avec des vidéos humaines, l'autre par le toucher.",
+      "La Chine a déjà produit plus de robots industriels en neuf mois qu'en toute l'année 2025 : 794 781 fin septembre."
+    ]
+  },
+  {
     "numero": 0,
     "semaine_iso": "2026-S42",
     "date_publication": "2026-10-19",
