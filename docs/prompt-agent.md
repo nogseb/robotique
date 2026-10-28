@@ -1,6 +1,6 @@
-# Prompt agent — Veille robotique hebdomadaire (v1.2)
+# Prompt agent — Veille robotique hebdomadaire (v1.3)
 
-Version : 1.2 — 19 octobre 2026 (site en ligne, génération par build.py)
+Version : 1.3 — 28 octobre 2026 (pistes proposées par Sébastien dans les tickets `piste`)
 Usage : tâche planifiée Manus.im, chaque lundi à 5 h (Europe/Paris)
 Auteur : Sébastien Noguès
 
@@ -80,6 +80,10 @@ Contenus sponsorisés, communiqués sans fait nouveau, vidéos sans contexte, ru
 
 ### 4.5 Ancrage France et Europe
 Si un signal français ou européen de niveau suffisant existe dans la semaine, au moins un des signaux publiés doit en relever. Ne baisse jamais le niveau d'exigence pour atteindre ce quota.
+
+### 4.6 Pistes proposées par Sébastien
+Avant la collecte, lis les tickets GitHub ouverts portant l'étiquette `piste` et le nom de l'édition (`Piste AAAA-Sss — …`). Ce sont des suggestions, pas des signaux acquis : chaque piste passe les mêmes contrôles que le reste (période couverte, source de première main, grille de qualification, angle de la rubrique). Une vidéo ou un article de synthèse sert à orienter la recherche ; le signal publié repose sur le fait nouveau et sa source.
+Dans le ticket de contrôle, indique pour chaque piste si elle est retenue ou écartée, et pourquoi. Après publication, commente chaque ticket de piste avec ce sort et ferme-le.
 
 ## 5. Grille de qualification (obligatoire pour chaque signal)
 
@@ -236,6 +240,7 @@ Ouvre un ticket GitHub intitulé `Édition AAAA-Sss — à vérifier`, contenant
 - la liste des signaux publiés (titre, rubrique, maturité, source principale) ;
 - les points à vérifier en priorité : source unique, chiffre déclaratif, signal limite sur la maturité, sujet repris d'une édition précédente avec le fait nouveau ;
 - les signaux écartés et la raison ;
+- le sort de chaque piste proposée (retenue ou écartée, et pourquoi) ;
 - le lien vers la page publiée.
 
 ### 10.3 Ticket de non-publication (si le seuil n'est pas atteint)
