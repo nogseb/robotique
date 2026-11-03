@@ -24,6 +24,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 EDITIONS_DIR = DATA / "editions"
+# Rapports d'étonnement : un fichier Markdown par édition concernée (data/rapports/AAAA-Sss.md)
+RAPPORTS_DIR = DATA / "rapports"
 STATIC = ROOT / "static"
 DIST = ROOT / "dist"
 # Épures animées des en-têtes (générées par outils/chantier.py), insérées en ligne pour suivre les couleurs du thème
@@ -346,6 +348,97 @@ def charger():
     return editions, r
 
 
+def charger_rapports(editions, r):
+    """Rapports d'étonnement : en-tête clé: valeur entre deux lignes ---, puis le corps en Markdown simple."""
+    rapports = []
+    semaines = {e.get("semaine_iso") for e in editions}
+    for chemin in sorted(RAPPORTS_DIR.glob("*.md")) if RAPPORTS_DIR.exists() else []:
+        ou = f"rapports/{chemin.name}"
+        m = re.match(r"---\n(.*?)\n---\n(.*)", chemin.read_text(encoding="utf-8"), re.S)
+        if not m:
+            r.err(ou, "en-tête manquant (bloc --- clé: valeur ---)")
+            continue
+        meta = dict(l.split(": ", 1) for l in m.group(1).splitlines() if ": " in l)
+        manquants = [c for c in ("titre", "titre_court", "edition", "date", "chapeau", "description") if not meta.get(c)]
+        if manquants:
+            r.err(ou, "champs manquants : " + ", ".join(manquants))
+            continue
+        if meta["edition"] not in semaines:
+            r.err(ou, f"édition {meta['edition']} introuvable")
+        verifier_date(meta["date"], ou, r)
+        meta["corps"], meta["slug"] = m.group(2), chemin.stem
+        rapports.append(meta)
+    return sorted(rapports, key=lambda x: x["slug"], reverse=True)
+
+
+def url_rapport(rap):
+    return f"{BASE}rapports/{rap['slug']}/"
+
+
+# --- Markdown simple (rapports) : titres, paragraphes, listes, tableaux, gras, liens, renvois [n] ---
+
+def md_en_ligne(s):
+    s = t(s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"\[([^\]]+)\]\(((?:https?://|/|#)[^)\s]+)\)", lambda m: f'<a href="{a(m.group(2))}">{m.group(1)}</a>', s)
+    s = re.sub(r"\[(\d{1,2})\]", r'<a class="renvoi" href="#source-\1">[\1]</a>', s)
+    return s
+
+
+def md_ancre(titre):
+    import unicodedata
+    base = unicodedata.normalize("NFKD", titre).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", base).strip("-")
+
+
+def markdown(md):
+    lignes, out, i, section = md.strip().split("\n"), [], 0, ""
+    debut_bloc = re.compile(r"(#{2,3} |\||- |\d+\. )")
+    while i < len(lignes):
+        l = lignes[i]
+        if not l.strip():
+            i += 1
+        elif l.startswith("### "):
+            out.append(f'<h3 id="{md_ancre(l[4:])}">{md_en_ligne(l[4:])}</h3>')
+            i += 1
+        elif l.startswith("## "):
+            section = l[3:]
+            out.append(f'<h2 id="{md_ancre(section)}">{md_en_ligne(section)}</h2>')
+            i += 1
+        elif l.startswith("|"):
+            bloc = []
+            while i < len(lignes) and lignes[i].startswith("|"):
+                bloc.append(lignes[i])
+                i += 1
+            cel = lambda x: [c.strip() for c in x.strip().strip("|").split("|")]
+            tete = "".join(f'<th scope="col">{md_en_ligne(c)}</th>' for c in cel(bloc[0]))
+            rangs = "".join("<tr>" + "".join(
+                (f'<th scope="row">{md_en_ligne(c)}</th>' if j == 0 else f"<td>{md_en_ligne(c)}</td>")
+                for j, c in enumerate(cel(x))) + "</tr>" for x in bloc[2:])
+            out.append(f'<div class="tableau" tabindex="0"><table><thead><tr>{tete}</tr></thead><tbody>{rangs}</tbody></table></div>')
+        elif l.startswith("- "):
+            items = []
+            while i < len(lignes) and lignes[i].startswith("- "):
+                items.append(f"<li>{md_en_ligne(lignes[i][2:])}</li>")
+                i += 1
+            out.append(f"<ul>{''.join(items)}</ul>")
+        elif re.match(r"\d+\. ", l):
+            items = []
+            while i < len(lignes) and re.match(r"\d+\. ", lignes[i]):
+                n, texte = lignes[i].split(". ", 1)
+                ident = f' id="source-{n}"' if section == "Sources" else ""
+                items.append(f"<li{ident}>{md_en_ligne(texte)}</li>")
+                i += 1
+            out.append(f'<ol class="{"sources" if section == "Sources" else ""}">{"".join(items)}</ol>')
+        else:
+            para = []
+            while i < len(lignes) and lignes[i].strip() and not debut_bloc.match(lignes[i]):
+                para.append(lignes[i].strip())
+                i += 1
+            out.append(f"<p>{md_en_ligne(' '.join(para))}</p>")
+    return "\n".join(out)
+
+
 # --- Gabarits -----------------------------------------------------------------
 
 LOGO = ('<svg class="logo" viewBox="0 0 120 120" aria-hidden="true" focusable="false">'
@@ -605,8 +698,17 @@ def description_edition(ed):
     return txt if len(txt) <= 160 else txt[:157].rsplit(" ", 1)[0] + "…"
 
 
-def page_edition(ed, editions, accueil=False):
-    corps = "\n".join([ouverture(ed), echelle(ed), rubriques(ed), reperes(ed), errata(ed)])
+def coulisses(rap):
+    if not rap:
+        return ""
+    return f"""<section class="coulisses wrap ruled" aria-labelledby="titre-coulisses">
+  <h2 id="titre-coulisses">En coulisses</h2>
+  <p>{t(rap['chapeau'])} <a href="{url_rapport(rap)}">Lire le rapport d'étonnement</a></p>
+</section>"""
+
+
+def page_edition(ed, editions, accueil=False, rapport=None):
+    corps = "\n".join([ouverture(ed), echelle(ed), rubriques(ed), reperes(ed), coulisses(rapport), errata(ed)])
     if accueil:
         autres = [e for e in editions if e is not ed]
         if autres:
@@ -706,7 +808,7 @@ def page_glossaire(editions):
                 "glossaire/", corps, actif="glossaire/", jsonld=ld)
 
 
-def page_methode():
+def page_methode(rapports=()):
     niveaux = "".join(
         f'<li class="m{n}"><span class="nom">{jauge(n, lib)}{t(lib)}</span><span>{t(defi)}</span></li>'
         for n, lib, defi in MATURITES.values())
@@ -733,12 +835,41 @@ def page_methode():
   <h2>Qui la produit</h2>
   <p>Chaque lundi matin, un agent d'intelligence artificielle collecte, trie et rédige l'édition selon des règles écrites, puis la publie. Une vérification automatique bloque la publication si une règle n'est pas respectée. {AUTHOR} relit ensuite l'édition dans la journée. Dans le doute, une information est écartée plutôt que publiée.</p>
 
+{rapports_methode(rapports)}
   <h2>Corrections</h2>
   <p>Une erreur publiée est corrigée et signalée en bas de l'édition concernée, avec sa date. Pour signaler une erreur, <a href="{REPO}/issues">ouvrez un ticket sur GitHub</a>.</p>
 </section>"""
     return page(f"Méthode, {SITE_NAME}",
                 "Comment la veille robotique est produite : rubriques, échelle de maturité, sources, vérification et corrections.",
                 "methode/", corps, actif="methode/")
+
+
+def rapports_methode(rapports):
+    if not rapports:
+        return ""
+    liens = ", ".join(f'<a href="{url_rapport(x)}">édition {t(x["edition"])}</a>' for x in rapports)
+    return f"""  <h2>Rapports d'étonnement</h2>
+  <p>Quand une édition est produite autrement que d'habitude, par exemple en comparant les veilles de plusieurs IA, un rapport explique ce qui a été comparé, vérifié et corrigé : {liens}.</p>
+"""
+
+
+def page_rapport(rap, editions):
+    ed = next(e for e in editions if e["semaine_iso"] == rap["edition"])
+    semaine = periode(ed["periode"]["debut"], ed["periode"]["fin"])
+    corps = f"""<section class="ouverture court wrap">
+  <p class="numero">Édition <a href="{url_edition(ed)}">{t(rap['edition'])}</a>, semaine {t(semaine)}</p>
+  <h1 class="titre-edition">{t(rap['titre_court'])}</h1>
+  <p class="promesse">{t(rap['chapeau'])} Publié le {t(date_longue(rap['date']))}.</p>
+</section>
+<section class="wrap ruled prose rapport">
+{markdown(rap['corps'])}
+</section>"""
+    ld = {"@context": "https://schema.org", "@type": "Article", "headline": rap["titre"],
+          "description": rap["description"], "datePublished": rap["date"], "inLanguage": "fr",
+          "url": SITE + f"rapports/{rap['slug']}/",
+          "author": {"@type": "Person", "name": AUTHOR, "url": AUTHOR_URL},
+          "isPartOf": {"@type": "CreativeWorkSeries", "name": SITE_NAME, "url": SITE}}
+    return page(f"{rap['titre']}, {SITE_NAME}", rap["description"], f"rapports/{rap['slug']}/", corps, jsonld=ld)
 
 
 def page_404():
@@ -774,10 +905,11 @@ def flux(editions):
 """
 
 
-def sitemap(editions):
+def sitemap(editions, rapports=()):
     urls = [("", editions[0]["date_publication"]), ("editions/", editions[0]["date_publication"]),
             ("glossaire/", editions[0]["date_publication"]), ("methode/", None)]
     urls += [(e["semaine_iso"] + "/", e["date_publication"]) for e in editions]
+    urls += [(f"rapports/{x['slug']}/", x["date"]) for x in rapports]
     lignes = "".join(
         f"  <url><loc>{SITE}{u}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</url>\n" for u, m in urls)
     return f'<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{lignes}</urlset>\n'
@@ -819,20 +951,23 @@ def ecrire(rel, contenu):
     cible.write_text(contenu, encoding="utf-8")
 
 
-def generer(editions):
+def generer(editions, rapports=()):
     if DIST.exists():
         shutil.rmtree(DIST)
     shutil.copytree(STATIC, DIST / "assets")
     derniere = editions[0]
-    ecrire("index.html", page_edition(derniere, editions, accueil=True))
+    par_edition = {x["edition"]: x for x in rapports}
+    ecrire("index.html", page_edition(derniere, editions, accueil=True, rapport=par_edition.get(derniere["semaine_iso"])))
     for e in editions:
-        ecrire(f"{e['semaine_iso']}/index.html", page_edition(e, editions))
+        ecrire(f"{e['semaine_iso']}/index.html", page_edition(e, editions, rapport=par_edition.get(e["semaine_iso"])))
+    for x in rapports:
+        ecrire(f"rapports/{x['slug']}/index.html", page_rapport(x, editions))
     ecrire("editions/index.html", page_editions(editions))
     ecrire("glossaire/index.html", page_glossaire(editions))
-    ecrire("methode/index.html", page_methode())
+    ecrire("methode/index.html", page_methode(rapports))
     ecrire("404.html", page_404())
     ecrire("flux.xml", flux(editions))
-    ecrire("sitemap.xml", sitemap(editions))
+    ecrire("sitemap.xml", sitemap(editions, rapports))
     ecrire(".htaccess", HTACCESS)
     n = sum(1 for _ in DIST.rglob("*") if _.is_file())
     print(f"Site généré dans dist/ : {n} fichiers, {len(editions)} édition(s).")
@@ -845,6 +980,7 @@ def main():
     args = parser.parse_args()
 
     editions, r = charger()
+    rapports = charger_rapports(editions, r)
     for x in r.alertes:
         print(f"Alerte  {x}")
     for x in r.erreurs:
@@ -852,11 +988,11 @@ def main():
     if r.erreurs:
         print(f"{len(r.erreurs)} erreur(s) : publication bloquée.", file=sys.stderr)
         sys.exit(1)
-    print(f"Validation réussie : {len(editions)} édition(s), {len(r.alertes)} alerte(s).")
+    print(f"Validation réussie : {len(editions)} édition(s), {len(rapports)} rapport(s), {len(r.alertes)} alerte(s).")
     if args.update_data:
         mettre_a_jour_donnees(editions)
     if not args.check:
-        generer(editions)
+        generer(editions, rapports)
 
 
 if __name__ == "__main__":

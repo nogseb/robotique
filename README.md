@@ -11,6 +11,7 @@ Une erreur de validation (champ manquant, maturité inconnue, signal hors pério
 ```
 data/
   editions/AAAA-Sss.json   une édition par semaine ISO couverte (source de vérité)
+  rapports/AAAA-Sss.md     rapport d'étonnement facultatif sur une édition (en-tête --- clé: valeur ---, puis Markdown simple)
   index.json               régénéré par build.py --update-data
   historique.json          régénéré : URL des sources des 8 dernières éditions (dédoublonnage)
   glossaire.json           régénéré : mots de la semaine déjà définis
@@ -47,6 +48,7 @@ python3 -m http.server 8000 --directory /tmp/apercu   # puis http://localhost:80
 | `/robotique/editions/` | Toutes les éditions et l'index des signaux, filtrable par rubrique et maturité |
 | `/robotique/glossaire/` | Les mots de la semaine, une ancre par mot |
 | `/robotique/methode/` | Rubriques, échelle de maturité, sources, production, corrections |
+| `/robotique/rapports/AAAA-Sss/` | Rapport d'étonnement sur une édition, lié depuis l'édition (« En coulisses ») et depuis la page Méthode |
 | `/robotique/flux.xml` | Flux RSS des éditions |
 | `/robotique/sitemap.xml` | Plan du site |
 
