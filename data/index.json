@@ -1,5 +1,16 @@
 [
   {
+    "numero": 2,
+    "semaine_iso": "2026-S44",
+    "date_publication": "2026-11-04",
+    "url": "https://nogues.app/robotique/2026-S44/",
+    "essentiel": [
+      "Washington juge que les robots importés menacent sa sécurité nationale et ouvre 180 jours de négociations avant d'éventuels droits de douane.",
+      "Walmart engage 6 milliards de dollars avec Symbotic pour 25 entrepôts : les gros contrats vont à l'automatisation d'entrepôt, pas aux humanoïdes.",
+      "Les humanoïdes avancent à petits pas : GXO étend le robot Digit à deux entrepôts en 2027, sans dire combien de robots."
+    ]
+  },
+  {
     "numero": 1,
     "semaine_iso": "2026-S43",
     "date_publication": "2026-10-26",

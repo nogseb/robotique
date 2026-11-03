@@ -1,0 +1,273 @@
+{
+  "numero": 2,
+  "semaine_iso": "2026-S44",
+  "periode": { "debut": "2026-10-26", "fin": "2026-11-01" },
+  "date_publication": "2026-11-04",
+  "essentiel": [
+    "Washington juge que les robots importés menacent sa sécurité nationale et ouvre 180 jours de négociations avant d'éventuels droits de douane.",
+    "Walmart engage 6 milliards de dollars avec Symbotic pour 25 entrepôts : les gros contrats vont à l'automatisation d'entrepôt, pas aux humanoïdes.",
+    "Les humanoïdes avancent à petits pas : GXO étend le robot Digit à deux entrepôts en 2027, sans dire combien de robots."
+  ],
+  "signaux": [
+    {
+      "id": "2026-S44-01",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "ANYbotics ANYmal X",
+      "titre": "Le suisse ANYbotics livre un robot à pattes pour les sites à risque d'explosion",
+      "fait": "ANYmal X, conçu pour les zones où une étincelle peut déclencher une explosion, est livré à Equinor et DSM-Firmenich, selon ANYbotics.",
+      "portee": "Le nombre de robots livrés n'est pas communiqué. Toutes versions confondues, ANYbotics revendique 120 000 inspections par mois.",
+      "type": "produit",
+      "maturite": "commercialise",
+      "zone": "europe",
+      "horizon": "moins-1-an",
+      "acteurs": ["ANYbotics", "Equinor", "DSM-Firmenich"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-27",
+      "sources": [
+        {
+          "titre": "ANYbotics begins delivery of legged inspection robot built for explosive atmospheres",
+          "editeur": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/10/27/anybotics-begins-delivery-of-legged-inspection-robot-built-for-explosive-atmospheres/",
+          "date": "2026-10-27",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S44-02",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "Robot souple du MIT",
+      "titre": "Le MIT teste un robot souple qui rampe dans l'intestin grêle",
+      "fait": "Guidé à distance, ce tube avance comme un serpent grâce à des chambres gonflables. Il filme, pulvérise un médicament et prélève des tissus.",
+      "portee": "Testé sur l'animal, sur environ deux mètres d'intestin. Aucun essai chez l'humain n'est annoncé : c'est un résultat de laboratoire.",
+      "type": "recherche",
+      "maturite": "recherche",
+      "zone": "etats-unis",
+      "horizon": "plus-3-ans",
+      "acteurs": ["MIT", "Brigham and Women's Hospital"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-10-28",
+      "sources": [
+        {
+          "titre": "A soft robot could help doctors diagnose and treat disorders of the small intestine",
+          "editeur": "MIT News",
+          "url": "https://news.mit.edu/2026/soft-robot-could-help-doctors-diagnose-treat-small-intestine-disorders-1028",
+          "date": "2026-10-28",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S44-03",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "AGIBOT GO-3",
+      "titre": "Le chinois AGIBOT présente GO-3, une IA qui anticipe l'effet de ses gestes",
+      "fait": "Dévoilé à Shanghai, GO-3 Preview enchaîne raisonnement sur la tâche, prévision des résultats possibles et choix de l'action, selon AGIBOT.",
+      "portee": "Les classements cités viennent de l'entreprise. AGIBOT propose aussi le « Worken », une mesure des heures de travail utile des robots.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "chine",
+      "horizon": "1-3-ans",
+      "acteurs": ["AGIBOT"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-29",
+      "sources": [
+        {
+          "titre": "AGIBOT introduces Worken to measure productive robot work at AGIBOT Innovation Day 2026",
+          "editeur": "Robotics & Automation News",
+          "url": "https://roboticsandautomationnews.com/2026/10/29/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026/106452/",
+          "date": "2026-10-29",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S44-04",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "Bleu Robotics",
+      "titre": "Bleu Robotics lève 5 millions d'euros pour former vite des robots humanoïdes",
+      "fait": "Selon la start-up parisienne, une dizaine de démonstrations humaines suffisent pour apprendre un geste d'usine à un robot, en une quarantaine de minutes.",
+      "portee": "Ses partenaires industriels ne sont pas nommés et le produit est en développement : aucun robot formé ainsi ne travaille en usine.",
+      "type": "financement",
+      "maturite": "demo",
+      "zone": "france",
+      "horizon": "1-3-ans",
+      "acteurs": ["Bleu Robotics", "Contrarian Ventures", "OVNI Capital"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-29",
+      "sources": [
+        {
+          "titre": "Bleu Robotics Raises €5M to Teach Industrial Humanoids New Tasks in Under an Hour",
+          "editeur": "Humanoids Daily",
+          "url": "https://www.humanoidsdaily.com/news/bleu-robotics-5m-industrial-humanoid-training",
+          "date": "2026-10-29",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S44-05",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Digit chez GXO",
+      "titre": "GXO étend le robot humanoïde Digit à deux nouveaux entrepôts américains",
+      "fait": "Début 2027, Digit rejoindra les sites de Statesville et Lebanon. Sur le premier site, en Géorgie, il a déplacé plus de 100 000 bacs, selon GXO et Agility.",
+      "portee": "Le nombre de robots n'est pas communiqué. Les robots sont loués avec leur logiciel et leur maintenance, et non achetés.",
+      "type": "deploiement",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["GXO Logistics", "Agility Robotics"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-26",
+      "sources": [
+        {
+          "titre": "GXO and Agility Robotics Expand Partnership to Accelerate Deployment of Humanoids in U.S. Operations",
+          "editeur": "GXO Logistics et Agility Robotics (communiqué)",
+          "url": "https://mfn.se/all/a/gxo-logistics-inc/gxo-and-agility-robotics-expand-partnership-to-accelerate-deployment-of-humanoids-in-u-s-operations-d1cb6bba",
+          "date": "2026-10-26",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S44-06",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Section 232 robots",
+      "titre": "Washington juge que les robots importés menacent la sécurité nationale",
+      "fait": "Une proclamation du 28 octobre vise robots, machines industrielles et composants, humanoïdes et quadrupèdes compris. Aucune taxe immédiate.",
+      "portee": "180 jours de négociations s'ouvrent, puis des droits de douane restent possibles. Le texte invoque l'usage militaire des robots.",
+      "type": "reglementation",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["Maison-Blanche", "Département du Commerce des États-Unis"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-10-28",
+      "sources": [
+        {
+          "titre": "Adjusting Imports of Robotics, Industrial Machinery, and Their Parts and Components Into the United States",
+          "editeur": "Maison-Blanche",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united-states/",
+          "date": "2026-10-28",
+          "fiabilite": "primaire"
+        },
+        {
+          "titre": "President Trump Issues Proclamation on Imports of Robotics, Industrial Machinery, and Their Parts and Components",
+          "editeur": "Mayer Brown",
+          "url": "https://www.mayerbrown.com/en/insights/publications/2026/10/president-trump-issues-proclamation-on-imports-of-robotics-industrial-machinery-and-their-parts-and-components",
+          "date": "2026-10-30",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S44-07",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Walmart et Symbotic",
+      "titre": "Walmart engage 6 milliards de dollars avec Symbotic pour 25 entrepôts",
+      "fait": "Présenté comme un engagement initial sur plusieurs années, l'accord couvre la préparation à l'unité et des mini-entrepôts pour le commerce en ligne.",
+      "portee": "Aucun humanoïde ici : ce sont des systèmes d'entrepôt automatisés, utilisés par Walmart depuis 2017, qui décrochent les plus gros contrats.",
+      "type": "deploiement",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["Walmart", "Symbotic"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-10-29",
+      "sources": [
+        {
+          "titre": "Walmart and Symbotic Expand Commercial Agreement to Support Supply Chain Transformation",
+          "editeur": "Walmart et Symbotic (communiqué, Supply Chain Dive)",
+          "url": "https://www.supplychaindive.com/press-release/20261030-walmart-and-symbotic-expand-commercial-agreement-to-support-supply-chain-tr/",
+          "date": "2026-10-30",
+          "fiabilite": "primaire"
+        },
+        {
+          "titre": "Walmart commits $6 billion to expand Symbotic deal",
+          "editeur": "Reuters (reprise WMBD)",
+          "url": "https://wmbdradio.com/2026/10/29/walmart-commits-6-billion-to-expand-symbotic-deal/",
+          "date": "2026-10-29",
+          "fiabilite": "presse"
+        }
+      ]
+    }
+  ],
+  "chiffre": {
+    "valeur": "10 989",
+    "libelle": "robots industriels commandés en Amérique du Nord au troisième trimestre 2026",
+    "contexte": "24,8 % de plus qu'un an plus tôt, pour 723,5 millions de dollars, selon l'association professionnelle A3. Les robots collaboratifs progressent de 56 %. Ce sont des commandes, pas encore des installations.",
+    "sources": [
+      {
+        "titre": "North American robot orders grew nearly 25% in Q3",
+        "editeur": "Manufacturing Dive",
+        "url": "https://www.manufacturingdive.com/news/north-american-robot-orders-grew-nearly-25-percent-q3-2026-a3/873300/",
+        "date": "2026-10-30",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "cas_usage": {
+    "titre": "Otto Group : des robots pour trier les retours de commandes",
+    "entreprise": "Le distributeur allemand Otto Group, avec la start-up Sereact, dans un centre logistique en Pologne.",
+    "tache_robotisee": "Saisir, examiner et orienter chaque article retourné, y compris des objets jamais vus, grâce à l'IA de Sereact.",
+    "reste_manuel": "La supervision, les cas particuliers et la décision finale sur la qualité.",
+    "resultats_annonces": "Aucun pour l'instant : dix robots à deux bras d'abord, puis quinze bras de plus si l'essai réussit.",
+    "a_retenir": "Le tri des retours, tâche très variée, devient un banc d'essai pour l'IA de préhension, louée comme un service.",
+    "sources": [
+      {
+        "titre": "Otto Group and Sereact Bring NVIDIA-Powered Physical AI to Returns Processing",
+        "editeur": "Otto Group et Sereact (communiqué, Génération NT)",
+        "url": "https://www.generation-nt.com/communiques-presse/otto-group-and-sereact-bring-nvidia-powered-physical-ai-to-returns-2083547",
+        "date": "2026-10-28",
+        "fiabilite": "primaire"
+      },
+      {
+        "titre": "Otto Group prüft Einsatz von KI-Robotern in der Retouren-Abwicklung",
+        "editeur": "FashionUnited",
+        "url": "https://fashionunited.de/nachrichten/einzelhandel/otto-group-pruft-einsatz-von-ki-robotern-in-der-retouren-abwicklung/2026103069160",
+        "date": "2026-10-30",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "agenda": [
+    {
+      "debut": "2026-11-05",
+      "fin": "2026-11-06",
+      "evenement": "Humanoid Europe 2026",
+      "lieu": "Munich, Allemagne",
+      "pourquoi": "Rencontre Europe-Chine sur les humanoïdes, centrée sur une question : que se passe-t-il après la démonstration ?",
+      "url": "https://www.humanoidsdaily.com/features/humanoid-europe-2026-munich-robot-demos-real-deployment"
+    },
+    {
+      "debut": "2026-11-13",
+      "fin": "2026-11-13",
+      "evenement": "Swiss Robotics Day",
+      "lieu": "Zurich, Suisse",
+      "pourquoi": "La journée annuelle des laboratoires et industriels suisses de la robotique, organisée avec l'ETH Zurich.",
+      "url": "https://www.myswitzerland.com/en/experiences/events/swiss-robotics-day-2026/"
+    },
+    {
+      "debut": "2026-11-25",
+      "fin": "2026-11-26",
+      "evenement": "ROSCon Belgium",
+      "lieu": "Nivelles, Belgique",
+      "pourquoi": "Première édition belge de la conférence des développeurs de ROS, le logiciel libre de nombreux robots.",
+      "url": "https://osralliance.org/event/roscon-belgium-2026/"
+    }
+  ],
+  "mot_de_la_semaine": {
+    "terme": "Robot en tant que service (RaaS)",
+    "slug": "raas",
+    "definition": "Un modèle où l'entreprise loue le robot avec son logiciel et sa maintenance, au lieu de l'acheter. GXO utilise ce modèle pour ses humanoïdes Digit depuis 2024 ; Sereact l'applique chez Otto Group.",
+    "signal_lie": "2026-S44-05"
+  },
+  "errata": []
+}

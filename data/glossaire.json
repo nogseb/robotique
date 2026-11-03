@@ -6,6 +6,12 @@
     "semaine": "2026-S43"
   },
   {
+    "terme": "Robot en tant que service (RaaS)",
+    "slug": "raas",
+    "definition": "Un modèle où l'entreprise loue le robot avec son logiciel et sa maintenance, au lieu de l'acheter. GXO utilise ce modèle pour ses humanoïdes Digit depuis 2024 ; Sereact l'applique chez Otto Group.",
+    "semaine": "2026-S44"
+  },
+  {
     "terme": "VLA (vision-langage-action)",
     "slug": "vla",
     "definition": "Un modèle d'IA qui reçoit des images et une consigne en langage courant, puis produit directement les mouvements du robot. C'est ce type de modèle que Physical Intelligence propose désormais en location.",
