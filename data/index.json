@@ -1,5 +1,16 @@
 [
   {
+    "numero": 3,
+    "semaine_iso": "2026-S45",
+    "date_publication": "2026-11-10",
+    "url": "https://nogues.app/robotique/2026-S45/",
+    "essentiel": [
+      "Agility Robotics, qui fabrique le robot humanoïde Digit, entre en Bourse à New York après avoir bouclé sa fusion le 4 novembre.",
+      "Renault et le belge John Cockerill présentent un robot terrestre militaire piloté à distance, que l'armée française doit tester sous peu.",
+      "À Shanghai, six robots humanoïdes ont tenu une supérette pendant 24 heures : quatre ont réussi le test, deux ont échoué."
+    ]
+  },
+  {
     "numero": 2,
     "semaine_iso": "2026-S44",
     "date_publication": "2026-11-04",

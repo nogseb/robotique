@@ -1,0 +1,223 @@
+{
+  "numero": 3,
+  "semaine_iso": "2026-S45",
+  "periode": { "debut": "2026-11-02", "fin": "2026-11-08" },
+  "date_publication": "2026-11-10",
+  "essentiel": [
+    "Agility Robotics, qui fabrique le robot humanoïde Digit, entre en Bourse à New York après avoir bouclé sa fusion le 4 novembre.",
+    "Renault et le belge John Cockerill présentent un robot terrestre militaire piloté à distance, que l'armée française doit tester sous peu.",
+    "À Shanghai, six robots humanoïdes ont tenu une supérette pendant 24 heures : quatre ont réussi le test, deux ont échoué."
+  ],
+  "signaux": [
+    {
+      "id": "2026-S45-01",
+      "rubrique": "materiel",
+      "rubrique_secondaire": "usages",
+      "repere": "Renault Forefront",
+      "titre": "Renault et John Cockerill présentent un robot terrestre militaire téléopéré",
+      "fait": "Ce prototype électrique piloté à distance porte jusqu'à une tonne, avec environ 400 km d'autonomie. Il vise des usages militaires et civils.",
+      "portee": "Les armées doivent le tester sous peu. Renault reprend 70 % de pièces éprouvées ; John Cockerill espère en diviser le coût par dix.",
+      "type": "partenariat",
+      "maturite": "demo",
+      "zone": "france",
+      "horizon": "1-3-ans",
+      "acteurs": ["Renault", "John Cockerill"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-03",
+      "sources": [
+        {
+          "titre": "Défense: Renault s'allie à John Cockerill pour fabriquer un drone terrestre",
+          "editeur": "La Gazette France (AFP)",
+          "url": "https://www.lagazettefrance.fr/article/defense-renault-s-allie-a-john-cockerill-pour-fabriquer-un-drone-terrestre",
+          "date": "2026-11-03",
+          "fiabilite": "presse"
+        },
+        {
+          "titre": "Renault et John Cockerill présentent leur concept de drone terrestre Forefront Concept",
+          "editeur": "ABC Bourse (Agefi-Dow Jones)",
+          "url": "https://www.abcbourse.com/marches/renault-et-john-cockerill-presentent-leur-concept-de-drone-terrestre-forefront-c_705500",
+          "date": "2026-11-03",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S45-02",
+      "rubrique": "ia",
+      "rubrique_secondaire": "usages",
+      "repere": "Tutor Intelligence",
+      "titre": "Tutor Intelligence lève 75 M USD pour des robots guidés à distance au besoin",
+      "fait": "Ses robots manipulent des produits de grande consommation, comme des céréales ou des jouets. Quand ils hésitent, des opérateurs à distance les guident.",
+      "portee": "Les clients paient à l'heure ou à la pièce, sans achat. Tutor vise plus de 1 000 robots sous contrat fin 2027, selon l'entreprise.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["Tutor Intelligence", "Andreessen Horowitz"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-03",
+      "sources": [
+        {
+          "titre": "Tutor Intelligence raises $75 million to scale robot workforce",
+          "editeur": "Robotics & Automation News",
+          "url": "https://roboticsandautomationnews.com/2026/11/03/tutor-intelligence-raises-75-million-to-scale-robot-workforce/106645/",
+          "date": "2026-11-03",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S45-03",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "GenRobot AI",
+      "titre": "GenRobot AI lève 100 M USD pour enregistrer les gestes qui forment les robots",
+      "fait": "La start-up pékinoise conçoit des équipements qui filment des tâches ménagères ou industrielles et captent les mouvements des mains et du corps.",
+      "portee": "Nettoyées et annotées, ces données servent à entraîner les robots d'autres fabricants. SAIC Motor et Baidu font partie des investisseurs.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "chine",
+      "horizon": "moins-1-an",
+      "acteurs": ["GenRobot AI", "SAIC Motor", "Baidu"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-02",
+      "sources": [
+        {
+          "titre": "Robot-training data startup GenRobot AI raises $100 million in Series A+ funding",
+          "editeur": "TechNode",
+          "url": "https://technode.com/2026/11/02/robot-training-data-startup-genrobot-ai-raises-100-million-in-series-a-funding/",
+          "date": "2026-11-02",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S45-04",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Agility en Bourse",
+      "titre": "Agility Robotics, fabricant du robot humanoïde Digit, entre en Bourse au Nasdaq",
+      "fait": "Sa fusion avec une société cotée créée pour racheter une entreprise est bouclée le 4 novembre. Agility en attendait environ 465 M USD bruts.",
+      "portee": "Selon Agility, Digit travaille chez GXO, Schaeffler et Toyota au Canada, avec plus de 300 M USD de commandes sous conditions.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["Agility Robotics", "Churchill Capital Corp XI"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-04",
+      "sources": [
+        {
+          "titre": "Agility Robotics and Churchill Capital Corp XI Complete Business Combination",
+          "editeur": "Agility Robotics (communiqué déposé auprès de la SEC)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0002074973/000121390026116898/ea031120401ex99-2.htm",
+          "date": "2026-11-04",
+          "fiabilite": "primaire"
+        },
+        {
+          "titre": "Agility Robotics clears SPAC vote, expects $465M and Nasdaq debut November 5",
+          "editeur": "Dealroom",
+          "url": "https://dealroom.co/news/168998-agility-robotics-clears-spac-vote-expects-465m-and-nasdaq-debut-november/",
+          "date": "2026-11-03",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S45-05",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Norme ISO 21423",
+      "titre": "Une norme pour que les robots mobiles de marques différentes se coordonnent",
+      "fait": "Annoncée le 3 novembre, la norme ISO 21423 fixe comment ces robots partagent position, vitesse et tâches, entre eux et avec ascenseurs ou portes.",
+      "portee": "Elle doit éviter que des robots de fournisseurs différents se gênent dans un même entrepôt, et ouvrir le marché, selon l'association A3.",
+      "type": "reglementation",
+      "maturite": "commercialise",
+      "zone": "monde",
+      "horizon": "moins-1-an",
+      "acteurs": ["ISO", "A3"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-11-03",
+      "sources": [
+        {
+          "titre": "ISO 21423 helps mobile robots from different vendors communicate together",
+          "editeur": "Robotics 24/7",
+          "url": "https://www.robotics247.com/article/iso-21423-helps-mobile-robots-from-different-vendors-communicate-together",
+          "date": "2026-11-03",
+          "fiabilite": "presse"
+        }
+      ]
+    }
+  ],
+  "chiffre": {
+    "valeur": "36 %",
+    "libelle": "des 60 tâches nouvelles réussies par Liber-0, un modèle d'IA pour robots, sans entraînement sur ces tâches",
+    "contexte": "Selon LiberAI, qui l'a présenté le 4 novembre. Le modèle a appris sur plus de 2,2 millions d'heures de vidéos humaines et des gestes captés avec des gants. Résultat non vérifié par un tiers : face à une tâche nouvelle, le robot échoue encore près de deux fois sur trois.",
+    "sources": [
+      {
+        "titre": "From human experience to robot action: LiberAI launches Liber-0 world-action model",
+        "editeur": "Robotics & Automation News",
+        "url": "https://roboticsandautomationnews.com/2026/11/04/from-human-experience-to-robot-action-liberai-launches-liber-0-world-action-model/106378/",
+        "date": "2026-11-04",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "cas_usage": {
+    "titre": "Shanghai : six robots humanoïdes tiennent une supérette pendant 24 heures",
+    "entreprise": "Le fabricant chinois AGIBOT, dans une supérette en activité du quartier de Xuhui, à Shanghai, du 2 au 3 novembre.",
+    "tache_robotisee": "Accueil, commandes, café, plats chauds, réassort et nettoyage des tables : 1 730 tâches et 683 clients servis en 24 heures.",
+    "reste_manuel": "Les ingénieurs assurent l'adaptation et l'entretien ; un robot qui doute s'arrête et demande de l'aide.",
+    "resultats_annonces": "Quatre robots sur six ont réussi. Celui du nettoyage est sorti du magasin, celui du réassort n'a pas suivi le rythme.",
+    "a_retenir": "Réussir une tâche est acquis ; tenir 24 heures sans aide reste le vrai défi. Et c'est AGIBOT qui note ses propres robots.",
+    "sources": [
+      {
+        "titre": "AgiBot's Convenience Store Test: The Challenge Is Not Working, but Keeping It Going",
+        "editeur": "Gasgoo",
+        "url": "https://autonews.gasgoo.com/articles/news/agibots-convenience-store-test-the-challenge-is-not-working-but-keeping-it-going-2118558800365383680",
+        "date": "2026-11-06",
+        "fiabilite": "presse"
+      },
+      {
+        "titre": "Six humanoid robots in China work 24-hour shift in a store, two fail assessment",
+        "editeur": "Interesting Engineering",
+        "url": "https://interestingengineering.com/ai-robotics/six-agibot-humanoid-robots-complete",
+        "date": "2026-11-07",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "agenda": [
+    {
+      "debut": "2026-11-13",
+      "fin": "2026-11-13",
+      "evenement": "Swiss Robotics Day",
+      "lieu": "Zurich, Suisse",
+      "pourquoi": "La journée annuelle des laboratoires et industriels suisses de la robotique, organisée avec l'ETH Zurich.",
+      "url": "https://www.myswitzerland.com/en/experiences/events/swiss-robotics-day-2026/"
+    },
+    {
+      "debut": "2026-11-24",
+      "fin": "2026-11-26",
+      "evenement": "SPS, Smart Production Solutions",
+      "lieu": "Nuremberg, Allemagne",
+      "pourquoi": "Le grand salon européen de l'automatisation industrielle, avec plus de 1 000 exposants.",
+      "url": "https://www.codesys.com/company/news-center/events/codesys-at-the-sps-2026-in-nuremberg/"
+    },
+    {
+      "debut": "2026-11-25",
+      "fin": "2026-11-26",
+      "evenement": "ROSCon Belgium",
+      "lieu": "Nivelles, Belgique",
+      "pourquoi": "Première édition belge de la conférence des développeurs de ROS, le logiciel libre de nombreux robots.",
+      "url": "https://osralliance.org/event/roscon-belgium-2026/"
+    }
+  ],
+  "mot_de_la_semaine": {
+    "terme": "Téléopération",
+    "slug": "teleoperation",
+    "definition": "Le pilotage d'un robot à distance par une personne, à l'aide de caméras et de commandes. Tutor Intelligence y recourt quand ses robots hésitent ; le Forefront de Renault et John Cockerill est piloté de cette façon.",
+    "signal_lie": "2026-S45-02"
+  },
+  "errata": []
+}

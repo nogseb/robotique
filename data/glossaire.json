@@ -12,6 +12,12 @@
     "semaine": "2026-S44"
   },
   {
+    "terme": "Téléopération",
+    "slug": "teleoperation",
+    "definition": "Le pilotage d'un robot à distance par une personne, à l'aide de caméras et de commandes. Tutor Intelligence y recourt quand ses robots hésitent ; le Forefront de Renault et John Cockerill est piloté de cette façon.",
+    "semaine": "2026-S45"
+  },
+  {
     "terme": "VLA (vision-langage-action)",
     "slug": "vla",
     "definition": "Un modèle d'IA qui reçoit des images et une consigne en langage courant, puis produit directement les mouvements du robot. C'est ce type de modèle que Physical Intelligence propose désormais en location.",
