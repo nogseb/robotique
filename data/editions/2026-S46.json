@@ -1,0 +1,242 @@
+{
+  "numero": 4,
+  "semaine_iso": "2026-S46",
+  "periode": { "debut": "2026-11-09", "fin": "2026-11-15" },
+  "date_publication": "2026-11-16",
+  "essentiel": [
+    "L'allemand Agile Robots lève 500 millions de dollars, menés par SoftBank, pour produire davantage et s'implanter aux États-Unis.",
+    "La Chine bloque le rachat d'ABB Robotics par SoftBank, prévu pour 5,4 milliards de dollars : la géopolitique pèse sur la robotique.",
+    "Chez Mercedes-Benz, un humanoïde guidé par l'IA de Google a préparé des pièces avec 96 % de réussite, lors d'un essai limité."
+  ],
+  "signaux": [
+    {
+      "id": "2026-S46-01",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "Naïo Sanka",
+      "titre": "Le toulousain Naïo dévoile Sanka, un robot électrique pour vignes et vergers",
+      "fait": "Ce robot à chenilles de 2,2 tonnes, conçu avec Michelin, porte les outils agricoles classiques et grimpe des pentes de 30 %, de jour comme de nuit.",
+      "portee": "Prix annoncé : moins de 135 000 euros. Sanka entre en préparation de série ; premières livraisons au second semestre 2027.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "france",
+      "horizon": "1-3-ans",
+      "acteurs": ["Naïo Technologies", "Michelin"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-09",
+      "sources": [
+        {
+          "titre": "Naïo Technologies dévoile un nouveau robot électrique avec relevage et prise de force, pour vignes et vergers",
+          "editeur": "Réussir",
+          "url": "https://www.reussir.fr/articles/naio-un-robot-electrique-taille-pour-les-pentes",
+          "date": "2026-11-09",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-02",
+      "rubrique": "materiel",
+      "rubrique_secondaire": "ia",
+      "repere": "Atlas sur roues",
+      "titre": "Boston Dynamics monte des roues de trottinette sur son humanoïde Atlas",
+      "fait": "Un simple adaptateur remplace les pieds par des roues électriques, pour pousser les moteurs à leurs limites et tester des commandes apprises en simulation.",
+      "portee": "Ce n'est pas un produit : les résultats serviront à la version standard d'Atlas. Le robot a réussi un saut à 360 degrés du premier coup.",
+      "type": "recherche",
+      "maturite": "recherche",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["Boston Dynamics"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-11-09",
+      "sources": [
+        {
+          "titre": "Video: Boston Dynamics put wheels on Atlas, and now it’s pulling off 360-degree jumps",
+          "editeur": "Interesting Engineering",
+          "url": "https://interestingengineering.com/ai-robotics/boston-dynamics-atlas-wheeled-robot",
+          "date": "2026-11-09",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-03",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "NVIDIA GR00T 2",
+      "titre": "NVIDIA présente GR00T 2, un modèle ouvert qui forme les robots par l'exemple",
+      "fait": "Entraîné sur des données de robots et d'humains, GR00T 2 apprend des gestes à partir de démonstrations humaines. Le logiciel libre Isaac Lab 3.0 l'accompagne.",
+      "portee": "Foxconn et Siemens le testent. Selon NVIDIA, il réussit 71 % de 50 tâches avec une seule démonstration, sans vérification par un tiers.",
+      "type": "open-source",
+      "maturite": "pilote",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["NVIDIA", "Foxconn", "Siemens"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-09",
+      "sources": [
+        {
+          "titre": "NVIDIA Unveils GR00T 2 and Isaac Lab 3.0 at CoRL",
+          "editeur": "Let's Data Science",
+          "url": "https://letsdatascience.com/news/nvidia-unveils-gr00t-2-and-isaac-lab-30-at-corl-867274ea",
+          "date": "2026-11-09",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-04",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "FLEX, MIT et NYU",
+      "titre": "Des chercheurs apprennent aux robots à saisir l'intention derrière une consigne",
+      "fait": "Avec FLEX, un robot prié de ne pas renverser son café sur un ordinateur évite aussi le téléphone posé à côté : une IA généralise la consigne.",
+      "portee": "Testé seulement en simulation, sur trois tâches et sans résultat chiffré. Présenté à la conférence scientifique CoRL, à Austin.",
+      "type": "recherche",
+      "maturite": "recherche",
+      "zone": "etats-unis",
+      "horizon": "plus-3-ans",
+      "acteurs": ["MIT", "New York University"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-11-09",
+      "sources": [
+        {
+          "titre": "AI-assisted learning platform helps robots reason beyond literal commands",
+          "editeur": "MIT News",
+          "url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109",
+          "date": "2026-11-09",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-05",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Agile Robots",
+      "titre": "L'allemand Agile Robots lève 500 M USD, menés par SoftBank",
+      "fait": "Issue du centre aérospatial allemand, l'entreprise fabrique bras, mains, robots mobiles et humanoïdes. Elle est valorisée 8,5 milliards de dollars.",
+      "portee": "Selon Agile Robots, 20 000 de ses installations tournent chez des industriels. L'argent finance la production et l'expansion aux États-Unis.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "europe",
+      "horizon": "moins-1-an",
+      "acteurs": ["Agile Robots", "SoftBank", "NVIDIA"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-12",
+      "sources": [
+        {
+          "titre": "Agile Robots raises $500M funding led by SoftBank at $8.5B valuation",
+          "editeur": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/11/12/agile-robots-raises-500m-funding-led-by-softbank-at-8-5b-valuation/",
+          "date": "2026-11-12",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-06",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "ABB Robotics et SoftBank",
+      "rattrapage": true,
+      "titre": "La Chine bloque le rachat d'ABB Robotics par SoftBank, prévu pour 5,4 Md USD",
+      "fait": "Le service chinois de contrôle des investissements étrangers a interdit l'opération, annoncée en octobre 2025. Aucune raison officielle n'est donnée.",
+      "portee": "La Chine reçoit environ la moitié des robots industriels livrés par ABB Robotics : sans elle, l'accord perd une grande part de sa valeur.",
+      "type": "reglementation",
+      "maturite": "commercialise",
+      "zone": "chine",
+      "horizon": "moins-1-an",
+      "acteurs": ["ABB", "SoftBank"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-11-05",
+      "sources": [
+        {
+          "titre": "SoftBank’s proposed $5.4B acquisition of ABB Robotics blocked by China",
+          "editeur": "Robotics 24/7",
+          "url": "https://www.robotics247.com/article/softbanks-proposed-5.4b-acquisition-of-abb-robotics-blocked-by-china",
+          "date": "2026-11-05",
+          "fiabilite": "presse"
+        },
+        {
+          "titre": "China's block of SoftBank's ABB purchase raises supply-chain concerns",
+          "editeur": "AI Business",
+          "url": "https://aibusiness.com/automation/china-s-block-of-softbank-s-abb-purchase",
+          "date": "2026-11-10",
+          "fiabilite": "presse"
+        }
+      ]
+    }
+  ],
+  "chiffre": {
+    "valeur": "10 000",
+    "libelle": "robots humanoïdes par an : la capacité de l'usine d'Agile Robots à Fürstenfeldbruck, en Bavière",
+    "contexte": "Selon l'entreprise, pour une usine ouverte début 2026. C'est une capacité, pas une production : Agile Robots ne dit pas combien d'humanoïdes en sont sortis.",
+    "sources": [
+      {
+        "titre": "Agile Robots raises $500M funding led by SoftBank at $8.5B valuation",
+        "editeur": "SiliconANGLE",
+        "url": "https://siliconangle.com/2026/11/12/agile-robots-raises-500m-funding-led-by-softbank-at-8-5b-valuation/",
+        "date": "2026-11-12",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "cas_usage": {
+    "titre": "Mercedes-Benz : un humanoïde prépare les pièces pour l'assemblage",
+    "entreprise": "Mercedes-Benz, à Sindelfingen (Allemagne) et Kecskemét (Hongrie), avec le robot Apollo 2 d'Apptronik et l'IA de Google DeepMind.",
+    "tache_robotisee": "Prendre des pièces métalliques en vrac et les ranger dans des plateaux, dans l'ordre où l'assemblage en aura besoin.",
+    "reste_manuel": "Non précisé. L'automatisation doit laisser aux techniciens les tâches d'assemblage plus complexes.",
+    "resultats_annonces": "96 % de réussite selon Google, sans préciser sur combien d'essais. C'est un essai limité dans le temps.",
+    "a_retenir": "Un chiffre élevé, annoncé par le fournisseur de l'IA et non par le constructeur : le vrai test sera la durée.",
+    "sources": [
+      {
+        "titre": "Google’s Gemini Robotics 2.5 scores 96% in factory trial after tackling 200 tasks",
+        "editeur": "Interesting Engineering",
+        "url": "https://interestingengineering.com/ai-robotics/google-gemini-robotics-2-5-humanoid-factory-trial",
+        "date": "2026-11-10",
+        "fiabilite": "presse"
+      },
+      {
+        "titre": "Gemini Robotics 2.5: Apollo 2 sortiert Metallteile bei Mercedes mit 96 Prozent Erfolg",
+        "editeur": "BornCity",
+        "url": "https://borncity.com/news/gemini-robotics-2-5-apollo-2-sortiert-metallteile-bei-mercedes-mit-96-prozent-erfolg/",
+        "date": "2026-11-10",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "agenda": [
+    {
+      "debut": "2026-11-24",
+      "fin": "2026-11-26",
+      "evenement": "SPS, Smart Production Solutions",
+      "lieu": "Nuremberg, Allemagne",
+      "pourquoi": "Le grand salon européen de l'automatisation industrielle, avec plus de 1 000 exposants.",
+      "url": "https://www.codesys.com/company/news-center/events/codesys-at-the-sps-2026-in-nuremberg/"
+    },
+    {
+      "debut": "2026-11-25",
+      "fin": "2026-11-26",
+      "evenement": "ROSCon Belgium",
+      "lieu": "Nivelles, Belgique",
+      "pourquoi": "Première édition belge de la conférence des développeurs de ROS, le logiciel libre de nombreux robots.",
+      "url": "https://osralliance.org/event/roscon-belgium-2026/"
+    },
+    {
+      "debut": "2026-12-01",
+      "fin": "2026-12-02",
+      "evenement": "Humanoids Summit",
+      "lieu": "San Mateo, États-Unis",
+      "pourquoi": "Industriels, chercheurs et investisseurs des robots humanoïdes, pour la troisième édition dans la Silicon Valley.",
+      "url": "https://humanoidssummit.com/silicon-valley-2026"
+    }
+  ],
+  "mot_de_la_semaine": {
+    "terme": "Moteur physique",
+    "slug": "moteur-physique",
+    "definition": "Un logiciel qui calcule comment les objets bougent, tombent, glissent ou se déforment. Les robots s'y entraînent en simulation avant le monde réel ; Isaac Lab 3.0 de NVIDIA s'appuie sur le moteur libre Newton, qui simule câbles et tissus.",
+    "signal_lie": "2026-S46-03"
+  },
+  "errata": []
+}

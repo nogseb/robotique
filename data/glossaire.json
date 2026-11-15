@@ -6,6 +6,12 @@
     "semaine": "2026-S43"
   },
   {
+    "terme": "Moteur physique",
+    "slug": "moteur-physique",
+    "definition": "Un logiciel qui calcule comment les objets bougent, tombent, glissent ou se déforment. Les robots s'y entraînent en simulation avant le monde réel ; Isaac Lab 3.0 de NVIDIA s'appuie sur le moteur libre Newton, qui simule câbles et tissus.",
+    "semaine": "2026-S46"
+  },
+  {
     "terme": "Robot en tant que service (RaaS)",
     "slug": "raas",
     "definition": "Un modèle où l'entreprise loue le robot avec son logiciel et sa maintenance, au lieu de l'acheter. GXO utilise ce modèle pour ses humanoïdes Digit depuis 2024 ; Sereact l'applique chez Otto Group.",

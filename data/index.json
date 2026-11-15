@@ -1,5 +1,16 @@
 [
   {
+    "numero": 4,
+    "semaine_iso": "2026-S46",
+    "date_publication": "2026-11-16",
+    "url": "https://nogues.app/robotique/2026-S46/",
+    "essentiel": [
+      "L'allemand Agile Robots lève 500 millions de dollars, menés par SoftBank, pour produire davantage et s'implanter aux États-Unis.",
+      "La Chine bloque le rachat d'ABB Robotics par SoftBank, prévu pour 5,4 milliards de dollars : la géopolitique pèse sur la robotique.",
+      "Chez Mercedes-Benz, un humanoïde guidé par l'IA de Google a préparé des pièces avec 96 % de réussite, lors d'un essai limité."
+    ]
+  },
+  {
     "numero": 3,
     "semaine_iso": "2026-S45",
     "date_publication": "2026-11-10",
