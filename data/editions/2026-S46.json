@@ -1,0 +1,288 @@
+{
+  "numero": 4,
+  "semaine_iso": "2026-S46",
+  "periode": { "debut": "2026-11-09", "fin": "2026-11-15" },
+  "date_publication": "2026-11-16",
+  "essentiel": [
+    "L'allemand Agile Robots lève 500 millions de dollars, menés par SoftBank, pour produire davantage et s'implanter aux États-Unis.",
+    "La Chine bloque le rachat d'ABB Robotics par SoftBank, prévu pour 5,4 milliards de dollars : la géopolitique pèse sur la robotique.",
+    "L'humanoïde Apollo affiche 96 % de réussite chez Mercedes-Benz selon Google ; GXO en envisage jusqu'à 1 000, sans commande ferme."
+  ],
+  "signaux": [
+    {
+      "id": "2026-S46-01",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "Naïo Sanka",
+      "titre": "Le toulousain Naïo dévoile Sanka, un robot électrique pour vignes et vergers",
+      "fait": "Ce robot à chenilles de 2,2 tonnes, conçu avec Michelin, porte les outils agricoles classiques et grimpe des pentes de 30 %, de jour comme de nuit.",
+      "portee": "Prix annoncé : moins de 135 000 euros. Sanka entre en préparation de série ; premières livraisons au second semestre 2027.",
+      "type": "produit",
+      "maturite": "demo",
+      "zone": "france",
+      "horizon": "1-3-ans",
+      "acteurs": ["Naïo Technologies", "Michelin"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-09",
+      "sources": [
+        {
+          "titre": "Naïo Technologies dévoile un nouveau robot électrique avec relevage et prise de force, pour vignes et vergers",
+          "editeur": "Réussir",
+          "url": "https://www.reussir.fr/articles/naio-un-robot-electrique-taille-pour-les-pentes",
+          "date": "2026-11-09",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-02",
+      "rubrique": "materiel",
+      "rubrique_secondaire": null,
+      "repere": "Melexis MLX90901",
+      "titre": "Le belge Melexis lance un doigt tactile pour les mains de robots humanoïdes",
+      "fait": "Ce module mesure la force avec laquelle un objet appuie sur le bout du doigt, et dans quel sens il glisse : de quoi saisir sans écraser ni lâcher.",
+      "portee": "Seul un kit d'évaluation est disponible, pour les fabricants de mains et de robots. Ni client nommé, ni date de production en série.",
+      "type": "produit",
+      "maturite": "commercialise",
+      "zone": "europe",
+      "horizon": "1-3-ans",
+      "acteurs": ["Melexis"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-11-12",
+      "sources": [
+        {
+          "titre": "Melexis Gives Humanoid Robots Sense of Touch with Its First Tactile Fingertip Module",
+          "editeur": "Robotics Tomorrow (communiqué de Melexis)",
+          "url": "https://www.roboticstomorrow.com/news/2026/11/12/melexis-gives-humanoid-robots-sense-of-touch-with-its-first-tactile-fingertip-module/27374",
+          "date": "2026-11-12",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-03",
+      "rubrique": "ia",
+      "rubrique_secondaire": null,
+      "repere": "NVIDIA GR00T 2",
+      "titre": "NVIDIA présente GR00T 2, un modèle ouvert qui forme les robots par l'exemple",
+      "fait": "Entraîné sur des données de robots et 100 000 heures de vidéos humaines filmées à la première personne, il aide les robots à enchaîner des gestes.",
+      "portee": "Foxconn et Siemens le testent. Selon NVIDIA, il réussit 71 % de 50 tâches avec une démonstration, 95 % avec cinq, sans contrôle externe.",
+      "type": "open-source",
+      "maturite": "pilote",
+      "zone": "etats-unis",
+      "horizon": "moins-1-an",
+      "acteurs": ["NVIDIA", "Foxconn", "Siemens"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-09",
+      "sources": [
+        {
+          "titre": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+          "editeur": "NVIDIA",
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+          "date": "2026-11-09",
+          "fiabilite": "primaire"
+        },
+        {
+          "titre": "NVIDIA Unveils GR00T 2 and Isaac Lab 3.0 at CoRL",
+          "editeur": "Let's Data Science",
+          "url": "https://letsdatascience.com/news/nvidia-unveils-gr00t-2-and-isaac-lab-30-at-corl-867274ea",
+          "date": "2026-11-09",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-04",
+      "rubrique": "ia",
+      "rubrique_secondaire": "usages",
+      "repere": "Gemini Robotics 2.5",
+      "titre": "L'IA de Google guide un humanoïde sur des lignes de montage Mercedes-Benz",
+      "fait": "En Allemagne et en Hongrie, le robot Apollo 2 d'Apptronik a pris des pièces en vrac pour les ranger dans des plateaux, dans l'ordre du montage.",
+      "portee": "96 % de réussite selon Google, sans nombre d'essais ni durée : une preuve de concept. Le modèle est réservé aux partenaires de Google.",
+      "type": "produit",
+      "maturite": "pilote",
+      "zone": "europe",
+      "horizon": "1-3-ans",
+      "acteurs": ["Google DeepMind", "Apptronik", "Mercedes-Benz"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-10",
+      "sources": [
+        {
+          "titre": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+          "editeur": "Google DeepMind",
+          "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+          "date": "2026-11-10",
+          "fiabilite": "primaire"
+        },
+        {
+          "titre": "Google’s Gemini Robotics 2.5 scores 96% in factory trial after tackling 200 tasks",
+          "editeur": "Interesting Engineering",
+          "url": "https://interestingengineering.com/ai-robotics/google-gemini-robotics-2-5-humanoid-factory-trial",
+          "date": "2026-11-10",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-05",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Agile Robots",
+      "titre": "L'allemand Agile Robots lève 500 M USD, menés par SoftBank",
+      "fait": "Issue du centre aérospatial allemand, l'entreprise munichoise fabrique bras, mains, robots mobiles et humanoïdes. NVIDIA et Hitachi participent.",
+      "portee": "Valorisée 8,5 Md USD, elle revendique 20 000 installations chez des industriels. L'argent ira à la production et à l'essor aux États-Unis.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "europe",
+      "horizon": "moins-1-an",
+      "acteurs": ["Agile Robots", "SoftBank", "NVIDIA", "Hitachi"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-12",
+      "sources": [
+        {
+          "titre": "Agile Robots raises $500M funding led by SoftBank at $8.5B valuation",
+          "editeur": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/11/12/agile-robots-raises-500m-funding-led-by-softbank-at-8-5b-valuation/",
+          "date": "2026-11-12",
+          "fiabilite": "presse"
+        },
+        {
+          "titre": "SoftBank and Nvidia back Munich's Agile Robots at an $8.5B valuation in a $500M Series F",
+          "editeur": "Dealroom",
+          "url": "https://dealroom.co/news/172046-agile-robots-lands-450-million-at-8-5b-valuation-to-crack-the-us/",
+          "date": "2026-11-12",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-06",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "ABB Robotics et SoftBank",
+      "rattrapage": true,
+      "titre": "La Chine bloque le rachat d'ABB Robotics par SoftBank, prévu pour 5,4 Md USD",
+      "fait": "Le service chinois de contrôle des investissements étrangers a interdit l'opération, annoncée en octobre 2025. Aucune raison officielle n'est donnée.",
+      "portee": "La Chine reçoit environ la moitié des robots industriels livrés par ABB Robotics : sans elle, l'accord perd une grande part de sa valeur.",
+      "type": "reglementation",
+      "maturite": "commercialise",
+      "zone": "chine",
+      "horizon": "moins-1-an",
+      "acteurs": ["ABB", "SoftBank"],
+      "chiffres_selon_entreprise": false,
+      "date_evenement": "2026-11-05",
+      "sources": [
+        {
+          "titre": "SoftBank’s proposed $5.4B acquisition of ABB Robotics blocked by China",
+          "editeur": "Robotics 24/7",
+          "url": "https://www.robotics247.com/article/softbanks-proposed-5.4b-acquisition-of-abb-robotics-blocked-by-china",
+          "date": "2026-11-05",
+          "fiabilite": "presse"
+        },
+        {
+          "titre": "China's block of SoftBank's ABB purchase raises supply-chain concerns",
+          "editeur": "AI Business",
+          "url": "https://aibusiness.com/automation/china-s-block-of-softbank-s-abb-purchase",
+          "date": "2026-11-10",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S46-07",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "GXO et Apptronik",
+      "titre": "Le logisticien GXO envisage jusqu'à 1 000 humanoïdes Apollo en quatre ans",
+      "fait": "GXO signe une lettre d'intention avec Apptronik. Des essais en entrepôt valident la sécurité dès 2027, avant un premier déploiement nord-américain.",
+      "portee": "Pas une commande : le volume dépend de résultats et d'objectifs de performance et de sécurité. Les robots seraient loués, pas achetés.",
+      "type": "partenariat",
+      "maturite": "pilote",
+      "zone": "etats-unis",
+      "horizon": "1-3-ans",
+      "acteurs": ["GXO Logistics", "Apptronik"],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-12",
+      "sources": [
+        {
+          "titre": "GXO and Apptronik expand partnership to scale humanoid deployment",
+          "editeur": "GXO Logistics",
+          "url": "https://gxo.com/news_article/gxo-apptronik-expand-humanoid-robotics-partnership/",
+          "date": "2026-11-12",
+          "fiabilite": "primaire"
+        }
+      ]
+    }
+  ],
+  "chiffre": {
+    "valeur": "152",
+    "libelle": "robots industriels en service pour 10 000 salariés de l'industrie manufacturière, en moyenne dans le monde",
+    "contexte": "Selon les données publiées par la Fédération internationale de robotique (IFR) le 12 novembre. L'Union européenne atteint 240, l'Allemagne 469, la Chine 193 et la Corée du Sud 1 066 ; la France n'est pas citée. C'est un parc en service rapporté à l'emploi, pas un rythme de ventes.",
+    "sources": [
+      {
+        "titre": "Robot Density Highest in South Korea, Singapore and Germany",
+        "editeur": "International Federation of Robotics",
+        "url": "https://ifr.org/ifr-press-releases/news/robot-density-highest-in-south-korea-singapore-and-germany",
+        "date": "2026-11-12",
+        "fiabilite": "primaire"
+      },
+      {
+        "titre": "Global robot density reaches 152 units per 10,000 employees",
+        "editeur": "DC Velocity",
+        "url": "https://www.dcvelocity.com/material-handling/robotics/global-robot-density-reaches-152-units-per-10000-employees",
+        "date": "2026-11-12",
+        "fiabilite": "presse"
+      }
+    ]
+  },
+  "cas_usage": {
+    "titre": "DHL Supply Chain : plus de 9 000 robots déjà au travail en entrepôt",
+    "entreprise": "DHL Supply Chain, la branche logistique de DHL, dans son réseau mondial d'entrepôts.",
+    "tache_robotisee": "Prélever des articles et décharger les camions, notamment avec le robot Stretch de Boston Dynamics.",
+    "reste_manuel": "Les imprévus, l'expertise et les arbitrages restent aux équipes ; DHL dit ne pas viser la suppression de postes.",
+    "resultats_annonces": "Selon DHL : 1,5 milliard d'articles prélevés et 10 millions de déchargements cumulés. Des robots plus adaptables sont en essai.",
+    "a_retenir": "Le robot d'entrepôt est déjà courant à grande échelle ; reste à prouver celui qui s'adapte seul.",
+    "sources": [
+      {
+        "titre": "DHL Supply Chain Doubles Down on Digitalization Strategy, Pilots Adaptive Robotics and AI Orchestration",
+        "editeur": "DHL Supply Chain",
+        "url": "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-supply-chain-doubles-down-on-digitalization-strategy-pilots-adaptive-robotics-and-ai-orchestration.html",
+        "date": "2026-11-09",
+        "fiabilite": "primaire"
+      }
+    ]
+  },
+  "agenda": [
+    {
+      "debut": "2026-11-24",
+      "fin": "2026-11-26",
+      "evenement": "SPS, Smart Production Solutions",
+      "lieu": "Nuremberg, Allemagne",
+      "pourquoi": "Le grand salon européen de l'automatisation industrielle, où la robotique côtoie l'IA appliquée aux usines.",
+      "url": "https://corporate.mesago.com/events/en/press/press-releases/press-releases-events/sps2026-update.html"
+    },
+    {
+      "debut": "2026-11-25",
+      "fin": "2026-11-26",
+      "evenement": "ROSCon Belgium",
+      "lieu": "Nivelles, Belgique",
+      "pourquoi": "Première édition belge de la conférence des développeurs de ROS, le logiciel libre de nombreux robots.",
+      "url": "https://osralliance.org/event/roscon-belgium-2026/"
+    },
+    {
+      "debut": "2026-12-01",
+      "fin": "2026-12-02",
+      "evenement": "Humanoids Summit",
+      "lieu": "San Mateo, États-Unis",
+      "pourquoi": "Industriels, chercheurs et investisseurs des robots humanoïdes, pour la troisième édition dans la Silicon Valley.",
+      "url": "https://humanoidssummit.com/silicon-valley-2026"
+    }
+  ],
+  "mot_de_la_semaine": {
+    "terme": "Capteur tactile",
+    "slug": "capteur-tactile",
+    "definition": "Un capteur qui mesure ce que touche la main d'un robot : la force avec laquelle un objet appuie, et parfois le sens dans lequel il glisse. Il aide à saisir sans écraser ni lâcher ; le doigt de Melexis en est un exemple.",
+    "signal_lie": "2026-S46-02"
+  },
+  "errata": []
+}
