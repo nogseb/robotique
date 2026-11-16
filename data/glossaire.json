@@ -6,9 +6,9 @@
     "semaine": "2026-S43"
   },
   {
-    "terme": "Moteur physique",
-    "slug": "moteur-physique",
-    "definition": "Un logiciel qui calcule comment les objets bougent, tombent, glissent ou se déforment. Les robots s'y entraînent en simulation avant le monde réel ; Isaac Lab 3.0 de NVIDIA s'appuie sur le moteur libre Newton, qui simule câbles et tissus.",
+    "terme": "Capteur tactile",
+    "slug": "capteur-tactile",
+    "definition": "Un capteur qui mesure ce que touche la main d'un robot : la force avec laquelle un objet appuie, et parfois le sens dans lequel il glisse. Il aide à saisir sans écraser ni lâcher ; le doigt de Melexis en est un exemple.",
     "semaine": "2026-S46"
   },
   {
