@@ -14,7 +14,7 @@
   {
     "terme": "Planification de gestes",
     "slug": "planification-de-gestes",
-    "definition": "La planification de gestes consiste à choisir les mouvements d'un robot et leur ordre pour accomplir une tâche. Sur une étagère encombrée, le robot peut d'abord déplacer un obstacle, puis saisir l'objet demandé.",
+    "definition": "Choisir les mouvements d'un robot et leur ordre pour accomplir une tâche : sur une étagère encombrée, déplacer d'abord un obstacle, puis saisir l'objet. Gemini 4 Hydrogen de Google planifie ainsi la tâche avant d'écrire le programme du bras.",
     "semaine": "2026-S47"
   },
   {

@@ -7,60 +7,25 @@
   },
   "date_publication": "2026-11-24",
   "essentiel": [
-    "Medical Microinstruments lance en Europe des ciseaux robotisés déjà utilisés dans des opérations en Espagne et en Allemagne.",
-    "Selon Genesis AI, la société a levé 500 millions de dollars pour développer et déployer son robot Eno.",
-    "GlobalFoundries prévoit d'étendre les inspections par Spot dans ses usines et de commencer à tester l'humanoïde Atlas début 2027."
+    "La start-up parisienne Genesis AI lève 500 millions de dollars pour son robot Eno, dont 30 à 40 exemplaires sont en essai.",
+    "En Chine, des humanoïdes trient des colis dans 11 centres de China Post, au rythme d'un employé expérimenté selon leur fabricant.",
+    "Google ouvre aux développeurs Gemini 4 Hydrogen, un modèle qui planifie une tâche et écrit le programme qui pilote le bras."
   ],
   "signaux": [
-    {
-      "id": "2026-S47-01",
-      "rubrique": "materiel",
-      "rubrique_secondaire": "ia",
-      "repere": "XHAND 1 Pro-U",
-      "titre": "Robotera ouvre les commandes de sa main XHAND 1 Pro-U",
-      "fait": "Selon Robotera, le lot initial compte 40 mains. Le prix et le calendrier de livraison ne sont pas communiqués.",
-      "portee": "Ses articulations correspondent à celles d'un gant rigide qui enregistre les gestes humains pour entraîner le robot.",
-      "type": "produit",
-      "maturite": "commercialise",
-      "zone": "chine",
-      "horizon": "moins-1-an",
-      "acteurs": [
-        "Robotera",
-        "NVIDIA"
-      ],
-      "chiffres_selon_entreprise": true,
-      "date_evenement": "2026-11-16",
-      "sources": [
-        {
-          "titre": "ROBOTERA Launches XHAND 1 Pro-U, Featured in NVIDIA's GR00T 2 DexUMI Demonstration",
-          "editeur": "Robotera (via PR Newswire)",
-          "url": "https://www.prnewswire.co.uk/news-releases/robotera-launches-xhand-1-pro-u-featured-in-nvidias-gr00t-2-dexumi-demonstration-302940296.html",
-          "date": "2026-11-16",
-          "fiabilite": "primaire"
-        },
-        {
-          "titre": "Robotera Opens Orders for XHAND 1 Pro-U, the Hand in NVIDIA's GR00T 2 DexUMI Demos",
-          "editeur": "Humanoids Daily",
-          "url": "https://www.humanoidsdaily.com/news/robotera-xhand-1-pro-u-dexumi-gr00t-2",
-          "date": "2026-11-16",
-          "fiabilite": "presse"
-        }
-      ]
-    },
     {
       "id": "2026-S47-02",
       "rubrique": "materiel",
       "rubrique_secondaire": "usages",
-      "repere": "NanoWrist",
-      "titre": "Medical Microinstruments lance des ciseaux robotisés en Europe",
-      "fait": "Les ciseaux NanoWrist coupent les tissus et utilisent un courant électrique pour limiter les saignements. Un chirurgien commande les gestes.",
-      "portee": "Les premiers usages annoncés concernent la chirurgie lymphatique en Espagne et le retrait de tissu cancéreux en Allemagne.",
+      "repere": "MMI NanoWrist",
+      "titre": "L'italien MMI lance en Europe des ciseaux robotisés pour la microchirurgie",
+      "fait": "Montés sur le robot Symani, que guide un chirurgien, ces ciseaux articulés coupent les tissus et les coagulent pour limiter les saignements.",
+      "portee": "Marqués CE en octobre, ils ont déjà servi en Espagne et en Allemagne. Ils attendent encore leur autorisation aux États-Unis.",
       "type": "produit",
       "maturite": "commercialise",
       "zone": "europe",
       "horizon": "moins-1-an",
       "acteurs": [
-        "Medical Microinstruments",
+        "Medical Microinstruments (MMI)",
         "Hôpital de Bellvitge",
         "Université RWTH Aachen"
       ],
@@ -68,38 +33,38 @@
       "date_evenement": "2026-11-20",
       "sources": [
         {
-          "titre": "MMI Adds Energy Capabilities to the Symani® Surgical System with the Introduction of NanoWrist® Monopolar Scissors",
-          "editeur": "Medical Microinstruments (via GlobeNewswire)",
-          "url": "https://www.globenewswire.com/news-release/2026/11/20/3407449/0/en/mmi-adds-energy-capabilities-to-the-symani-surgical-system-with-the-introduction-of-nanowrist-monopolar-scissors.html",
+          "titre": "MMI élargit les capacités énergétiques du système chirurgical Symani® avec le lancement des ciseaux monopolaires NanoWrist®",
+          "editeur": "MMI (communiqué via GlobeNewswire)",
+          "url": "https://www.globenewswire.com/news-release/2026/11/20/3407754/0/fr/mmi-%C3%A9largit-les-capacit%C3%A9s-%C3%A9nerg%C3%A9tiques-du-syst%C3%A8me-chirurgical-symani-avec-le-lancement-des-ciseaux-monopolaires-nanowrist.html",
           "date": "2026-11-20",
           "fiabilite": "primaire"
         }
       ]
     },
     {
-      "id": "2026-S47-03",
-      "rubrique": "ia",
+      "id": "2026-S47-07",
+      "rubrique": "materiel",
       "rubrique_secondaire": null,
-      "repere": "Lazy-MOSAIC",
-      "titre": "Un robot prépare plus vite ses gestes pour dégager un objet",
-      "fait": "Une étude de Carnegie Mellon et du Technion utilise un modèle pour trier les gestes possibles, puis simule les enchaînements prometteurs.",
-      "portee": "Sur des étagères encombrées, la méthode réduit le temps de calcul en simulation. Les auteurs montrent aussi un essai sur un robot réel.",
+      "repere": "Micro-robot du MIT",
+      "titre": "Plus léger qu'un trombone, un robot volant du MIT embarque ses capteurs",
+      "fait": "Ce robot à ailes battantes calcule seul sa position grâce à 244 mg d'électronique. Il tient en vol stationnaire et s'est posé sur un tournesol.",
+      "portee": "Il reste relié à un câble d'alimentation et guidé par un opérateur. Usages visés : polliniser des cultures ou inspecter des machines.",
       "type": "recherche",
       "maturite": "recherche",
-      "zone": "monde",
-      "horizon": "1-3-ans",
+      "zone": "etats-unis",
+      "horizon": "plus-3-ans",
       "acteurs": [
-        "Université Carnegie Mellon",
-        "Technion"
+        "MIT",
+        "Université Cornell"
       ],
       "chiffres_selon_entreprise": false,
-      "date_evenement": "2026-11-16",
+      "date_evenement": "2026-11-18",
       "sources": [
         {
-          "titre": "Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models",
-          "editeur": "Auteurs de l'étude (arXiv)",
-          "url": "https://arxiv.org/abs/2611.21517",
-          "date": "2026-11-16",
+          "titre": "This featherweight, flying robot carries its own sensors and computers",
+          "editeur": "MIT News",
+          "url": "https://news.mit.edu/2026/featherweight-flying-robot-carries-its-own-sensors-and-computers-1118",
+          "date": "2026-11-18",
           "fiabilite": "primaire"
         }
       ]
@@ -110,15 +75,15 @@
       "rubrique_secondaire": null,
       "repere": "PhysVAM",
       "titre": "PhysVAM aide un bras robotisé à saisir des objets en mouvement",
-      "fait": "Dans une étude publiée sur arXiv, les auteurs testent un modèle qui estime quels gestes aideront un bras à attraper un objet mobile.",
-      "portee": "Le bras ajuste le moment de la prise sur un tapis roulant, un plateau tournant ou quand l'objet roule. Les essais restent en laboratoire.",
+      "fait": "Plutôt que d'imaginer les images à venir, ce modèle estime quel geste fera le plus avancer la tâche, pour attraper un objet qui glisse, tourne ou roule.",
+      "portee": "Sur un vrai bras, 64 % de réussite contre 37 % pour la meilleure méthode comparée, selon les auteurs. L'étude n'est pas encore relue.",
       "type": "recherche",
       "maturite": "recherche",
       "zone": "monde",
       "horizon": "1-3-ans",
       "acteurs": [
         "Université polytechnique de Hong Kong",
-        "Tencent Robotics X",
+        "Tencent",
         "Université de Cambridge"
       ],
       "chiffres_selon_entreprise": false,
@@ -134,35 +99,27 @@
       ]
     },
     {
-      "id": "2026-S47-05",
-      "rubrique": "usages",
+      "id": "2026-S47-08",
+      "rubrique": "ia",
       "rubrique_secondaire": null,
-      "repere": "Spot et Atlas",
-      "titre": "GlobalFoundries étend les inspections par Spot et prévoit de tester Atlas",
-      "fait": "L'accord prévoit d'étendre les inspections par Spot dans les usines de puces du groupe. Les premiers essais d'Atlas sont prévus début 2027.",
-      "portee": "Spot inspecte déjà des installations. Pour Atlas, le programme servira à choisir les tâches et à évaluer son intégration.",
-      "type": "partenariat",
+      "repere": "Gemini 4 Hydrogen",
+      "titre": "Google ouvre Gemini 4 Hydrogen, un modèle d'IA rapide pour piloter des robots",
+      "fait": "À partir d'une consigne et d'une image de caméra, le modèle planifie la tâche, écrit le programme qui commande le bras et le corrige jusqu'au résultat.",
+      "portee": "Ouvert aux développeurs via l'API Gemini. Au test Artificial Analysis Robotics, il égale le haut de gamme de Google, pour moins cher.",
+      "type": "produit",
       "maturite": "commercialise",
-      "zone": "monde",
+      "zone": "etats-unis",
       "horizon": "moins-1-an",
       "acteurs": [
-        "GlobalFoundries",
-        "Boston Dynamics"
+        "Google"
       ],
-      "chiffres_selon_entreprise": false,
+      "chiffres_selon_entreprise": true,
       "date_evenement": "2026-11-17",
       "sources": [
         {
-          "titre": "Boston Dynamics and GlobalFoundries expand robotics collaboration",
-          "editeur": "GlobalFoundries",
-          "url": "https://gf.com/news-and-events/news/boston-dynamics-and-globalfoundries-expand-robotics-collaboration/",
-          "date": "2026-11-17",
-          "fiabilite": "primaire"
-        },
-        {
-          "titre": "Boston Dynamics & GlobalFoundries Expand Robotics Collaboration",
-          "editeur": "Boston Dynamics",
-          "url": "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration/",
+          "titre": "Gemini 4 Hydrogen: a faster model for general purpose robotics",
+          "editeur": "Google for Developers",
+          "url": "https://developers.googleblog.com/gemini-hydrogen-for-robotics/",
           "date": "2026-11-17",
           "fiabilite": "primaire"
         }
@@ -173,109 +130,183 @@
       "rubrique": "usages",
       "rubrique_secondaire": null,
       "repere": "Genesis AI",
-      "titre": "Genesis AI lève 500 millions de dollars pour son robot Eno",
-      "fait": "Selon Genesis AI, la levée atteint 500 millions de dollars. Bpifrance fait partie des investisseurs.",
-      "portee": "L'argent doit financer l'entraînement et le déploiement d'Eno. L'entreprise ne donne aucun volume livré à des clients.",
+      "titre": "La start-up parisienne Genesis AI lève 500 M USD pour son robot Eno",
+      "fait": "Valorisée 3,5 Md USD, elle entraîne Eno, un robot à deux bras sur roues, avec les gestes de plus de 100 travailleurs équipés de gants à capteurs.",
+      "portee": "30 à 40 robots ont été construits, en essai chez quelques clients dont LG CNS. Un déploiement plus large est prévu en 2027.",
       "type": "financement",
-      "maturite": "commercialise",
-      "zone": "monde",
+      "maturite": "pilote",
+      "zone": "france",
       "horizon": "1-3-ans",
       "acteurs": [
         "Genesis AI",
-        "Premji Invest",
         "Khosla Ventures",
+        "Premji Invest",
         "Eclipse",
-        "Bpifrance"
+        "Bpifrance",
+        "NVIDIA"
       ],
       "chiffres_selon_entreprise": true,
       "date_evenement": "2026-11-17",
       "sources": [
         {
-          "titre": "Genesis AI Raises $500M Series A at $3.5B Valuation to Master Human-Level Dexterity in General-Purpose Robots and Deploy at Scale",
-          "editeur": "Genesis AI (via PR Newswire)",
-          "url": "https://www.prnewswire.com/news-releases/genesis-ai-raises-500m-series-a-at-3-5b-valuation-to-master-human-level-dexterity-in-general-purpose-robots-and-deploy-at-scale-302941249.html",
-          "date": "2026-11-17",
-          "fiabilite": "primaire"
-        },
-        {
-          "titre": "Genesis AI raises $500M to deploy glove-wearing robots",
-          "editeur": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots/",
+          "titre": "Genesis AI lève 500 millions de dollars pour mettre ses robots Eno à l'usine",
+          "editeur": "ActuIA",
+          "url": "https://www.actuia.com/actualite/genesis-ai-leve-500-millions-de-dollars-pour-mettre-ses-robots-eno-a-lusine/",
           "date": "2026-11-17",
           "fiabilite": "presse"
+        },
+        {
+          "titre": "Genesis AI raises $500m at a $3.5bn valuation to put Eno robots to work",
+          "editeur": "The Next Web",
+          "url": "https://thenextweb.com/news/genesis-ai-500m-series-a-3-5bn-valuation-eno-robot",
+          "date": "2026-11-17",
+          "fiabilite": "presse"
+        }
+      ]
+    },
+    {
+      "id": "2026-S47-09",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "ROBOTERA et China Post",
+      "titre": "En Chine, des robots humanoïdes trient des colis dans 11 centres postaux",
+      "fait": "Les humanoïdes de ROBOTERA chargent les colis sur les lignes de tri de China Post dans huit villes du Guangdong, après un essai lancé en mars à Canton.",
+      "portee": "Plus de 1 500 colis par heure, comme un employé expérimenté, selon ROBOTERA. Ni le nombre de robots ni l'avis de China Post ne sont publiés.",
+      "type": "deploiement",
+      "maturite": "deploye",
+      "zone": "chine",
+      "horizon": "moins-1-an",
+      "acteurs": [
+        "ROBOTERA",
+        "China Post"
+      ],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-17",
+      "sources": [
+        {
+          "titre": "ROBOTERA Expands Humanoid Robot Deployment Across China Post's Guangdong Network, Reaching Eight Cities Province-Wide",
+          "editeur": "ROBOTERA (communiqué repris par Macau Business)",
+          "url": "https://macaubusiness.com/robotera-expands-humanoid-robot-deployment-across-china-posts-guangdong-network-reaching-eight-cities-province-wide/",
+          "date": "2026-11-17",
+          "fiabilite": "primaire"
+        }
+      ]
+    },
+    {
+      "id": "2026-S47-10",
+      "rubrique": "usages",
+      "rubrique_secondaire": null,
+      "repere": "Rockwell et AGILOX",
+      "titre": "L'américain Rockwell rachète AGILOX, fabricant autrichien de chariots autonomes",
+      "fait": "AGILOX, plus de 250 salariés, a déployé plus de 2 500 robots mobiles, surtout des chariots élévateurs sans conducteur. Le prix n'est pas communiqué.",
+      "portee": "L'achat doit plus que doubler l'activité de robots mobiles de Rockwell. Clôture attendue début 2027, sous réserve d'autorisations.",
+      "type": "financement",
+      "maturite": "commercialise",
+      "zone": "europe",
+      "horizon": "moins-1-an",
+      "acteurs": [
+        "Rockwell Automation",
+        "AGILOX"
+      ],
+      "chiffres_selon_entreprise": true,
+      "date_evenement": "2026-11-18",
+      "sources": [
+        {
+          "titre": "Rockwell Automation Signs Definitive Agreement to Acquire AGILOX",
+          "editeur": "Rockwell Automation",
+          "url": "https://www.rockwellautomation.com/en-au/company/news/press-releases/Rockwell-Automation-Signs-Definitive-Agreement-to-Acquire-AGILOX.html",
+          "date": "2026-11-18",
+          "fiabilite": "primaire"
         }
       ]
     }
   ],
   "chiffre": {
-    "valeur": "+27,5 points",
-    "libelle": "de pourcentage sur le taux de réussite de PhysVAM",
-    "contexte": "Dans l'étude datée du 19 novembre, le bras équipé de PhysVAM devance la meilleure méthode comparée, selon les auteurs, dont Tencent Robotics X. Le résultat est une moyenne sur des essais de saisie d'objets en mouvement en laboratoire.",
+    "valeur": "20 %",
+    "libelle": "de robots et d'automatismes en plus d'ici 2028 dans les usines nord-américaines de General Motors",
+    "contexte": "Selon deux sources citées par Reuters le 17 novembre ; GM n'a pas confirmé ce chiffre. Le constructeur assemble aussi ses propres robots à Kokomo, dans l'Indiana. Le syndicat UAW y voit une menace pour l'emploi.",
     "sources": [
       {
-        "titre": "PhysVAM: Physics-oriented Future Value Action Model for Dynamic Object Manipulation",
-        "editeur": "Auteurs de l'étude (arXiv)",
-        "url": "https://arxiv.org/abs/2611.26105",
-        "date": "2026-11-19",
-        "fiabilite": "primaire"
+        "titre": "Exclusive-GM plans 20% boost in robotics as factory costs rise",
+        "editeur": "The Star (Reuters)",
+        "url": "https://www.thestar.com.my/tech/tech-news/2026/11/17/exclusive-gm-plans-20-boost-in-robotics-as-factory-costs-rise",
+        "date": "2026-11-17",
+        "fiabilite": "presse"
+      },
+      {
+        "titre": "EXCLUSIVE-GM plans 20% boost in robotics as factory costs rise",
+        "editeur": "Devdiscourse (Reuters)",
+        "url": "https://www.devdiscourse.com/article/international/4008550-exclusive-gm-plans-20-boost-in-robotics-as-factory-costs-rise",
+        "date": "2026-11-17",
+        "fiabilite": "presse"
       }
     ]
   },
   "cas_usage": {
-    "titre": "À Singapour, Spot inspecte les installations sous une usine de puces",
-    "entreprise": "GlobalFoundries, usine de Singapour.",
-    "tache_robotisee": "Les robots parcourent les zones techniques sous les salles de production et collectent des données d'inspection.",
-    "reste_manuel": "Le communiqué ne détaille pas les tâches qui restent à la charge des techniciens.",
-    "resultats_annonces": "Au 17 novembre, plus de 90 000 inspections depuis avril 2026, réalisées par deux robots selon GlobalFoundries et Boston Dynamics.",
-    "a_retenir": "Ces tournées couvrent des points d'inspection réguliers et alimentent la maintenance de l'usine.",
+    "titre": "GlobalFoundries : deux robots Spot inspectent une usine de puces à Singapour",
+    "entreprise": "GlobalFoundries, fabricant de puces, avec Boston Dynamics ; site de Singapour.",
+    "tache_robotisee": "Des rondes d'inspection dans les sous-sols techniques, où se trouvent réseaux, réservoirs de gaz et équipements de soutien.",
+    "reste_manuel": "Non précisé par les deux entreprises.",
+    "resultats_annonces": "Plus de 90 000 inspections depuis avril et 99 % de missions réussies, selon les partenaires. Spot gagne trois autres usines.",
+    "a_retenir": "Un robot éprouvé ouvre la porte au suivant : GlobalFoundries testera l'humanoïde Atlas début 2027.",
     "sources": [
       {
-        "titre": "Boston Dynamics and GlobalFoundries expand robotics collaboration",
-        "editeur": "GlobalFoundries",
-        "url": "https://gf.com/news-and-events/news/boston-dynamics-and-globalfoundries-expand-robotics-collaboration/",
-        "date": "2026-11-17",
-        "fiabilite": "primaire"
+        "titre": "Boston Dynamics and GlobalFoundries expand Spot operations and prepare to test Atlas humanoid",
+        "editeur": "Robotics & Automation News",
+        "url": "https://roboticsandautomationnews.com/2026/11/18/boston-dynamics-and-globalfoundries-expand-spot-operations-and-prepare-to-test-atlas-humanoid/107266/",
+        "date": "2026-11-18",
+        "fiabilite": "presse"
       },
       {
-        "titre": "Boston Dynamics & GlobalFoundries Expand Robotics Collaboration",
-        "editeur": "Boston Dynamics",
-        "url": "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration/",
-        "date": "2026-11-17",
-        "fiabilite": "primaire"
+        "titre": "Boston Dynamics, GlobalFoundries expand robotics collaboration",
+        "editeur": "Manufacturing Dive",
+        "url": "https://www.manufacturingdive.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration-spot-atlas/875112/",
+        "date": "2026-11-19",
+        "fiabilite": "presse"
       }
     ]
   },
   "agenda": [
     {
-      "debut": "2026-11-25",
+      "debut": "2026-11-24",
       "fin": "2026-11-26",
-      "evenement": "ROSCon Belgium",
-      "lieu": "Nivelles, Belgique",
-      "pourquoi": "Rencontre autour de ROS, un ensemble de logiciels libres pour programmer les robots.",
-      "url": "https://www.skywin.be/fr/events/roscon-belgium-25-26-novembre-2026-nivelles"
+      "evenement": "SPS, Smart Production Solutions",
+      "lieu": "Nuremberg, Allemagne",
+      "pourquoi": "Le grand salon européen de l'automatisation industrielle, où la robotique côtoie l'IA appliquée aux usines.",
+      "url": "https://corporate.mesago.com/events/en/press/press-releases/press-releases-events/sps2026-update.html"
     },
     {
-      "debut": "2026-12-03",
-      "fin": "2026-12-04",
-      "evenement": "ROS-Industrial Conference Europe",
-      "lieu": "Stuttgart, Allemagne",
-      "pourquoi": "Retours d'usine et démonstrations sur la programmation des robots industriels.",
-      "url": "https://www.ipa.fraunhofer.de/en/Events/2026/ros-industrial-conference.html"
+      "debut": "2026-12-01",
+      "fin": "2026-12-02",
+      "evenement": "Humanoids Summit",
+      "lieu": "San Mateo, États-Unis",
+      "pourquoi": "Industriels, chercheurs et investisseurs des robots humanoïdes, pour la troisième édition dans la Silicon Valley.",
+      "url": "https://humanoidssummit.com/silicon-valley-2026"
     },
     {
-      "debut": "2026-12-07",
-      "fin": "2026-12-09",
-      "evenement": "Conférence internationale Humanoids",
-      "lieu": "Santa Clara, États-Unis",
-      "pourquoi": "Travaux de recherche sur l'équilibre, la marche et la manipulation des robots humanoïdes.",
-      "url": "https://www.ieee-ras.org/event/2026-ieee-ras-25th-international-conference-on-humanoid-robots-humanoids-68892/"
+      "debut": "2026-12-08",
+      "fin": "2026-12-11",
+      "evenement": "GITEX World RobotiX",
+      "lieu": "Dubaï, Émirats arabes unis",
+      "pourquoi": "Nouveau salon des humanoïdes et de l'IA incarnée, adossé au GITEX, avec Unitree, UBTECH et DEEP Robotics.",
+      "url": "https://www.gitex.com/robotix"
     }
   ],
   "mot_de_la_semaine": {
     "terme": "Planification de gestes",
     "slug": "planification-de-gestes",
-    "definition": "La planification de gestes consiste à choisir les mouvements d'un robot et leur ordre pour accomplir une tâche. Sur une étagère encombrée, le robot peut d'abord déplacer un obstacle, puis saisir l'objet demandé.",
-    "signal_lie": "2026-S47-03"
+    "definition": "Choisir les mouvements d'un robot et leur ordre pour accomplir une tâche : sur une étagère encombrée, déplacer d'abord un obstacle, puis saisir l'objet. Gemini 4 Hydrogen de Google planifie ainsi la tâche avant d'écrire le programme du bras.",
+    "signal_lie": "2026-S47-08"
   },
-  "errata": []
+  "errata": [
+    {
+      "date": "2026-11-24",
+      "correction": "Édition consolidée le jour de sa publication avec une seconde veille. Ajoutés : Gemini 4 Hydrogen de Google, les humanoïdes de ROBOTERA chez China Post, le rachat d'AGILOX par Rockwell, le micro-robot volant du MIT, le chiffre de General Motors. Retirés : la main XHAND 1 Pro-U de Robotera et l'étude Lazy-MOSAIC ; le partenariat entre GlobalFoundries et Boston Dynamics ne figure plus que dans le cas d'usage. L'agenda a été renouvelé."
+    },
+    {
+      "date": "2026-11-24",
+      "correction": "Genesis AI est installée à Paris : sa zone passe de « monde » à « France ». Sa maturité passe de « commercialisé » à « pilote », car ses robots Eno sont encore en essai chez quelques clients.",
+      "signal_id": "2026-S47-06"
+    }
+  ]
 }
