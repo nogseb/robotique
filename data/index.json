@@ -1,5 +1,16 @@
 [
   {
+    "numero": 5,
+    "semaine_iso": "2026-S47",
+    "date_publication": "2026-11-24",
+    "url": "https://nogues.app/robotique/2026-S47/",
+    "essentiel": [
+      "Medical Microinstruments lance en Europe des ciseaux robotisés déjà utilisés dans des opérations en Espagne et en Allemagne.",
+      "Selon Genesis AI, la société a levé 500 millions de dollars pour développer et déployer son robot Eno.",
+      "GlobalFoundries prévoit d'étendre les inspections par Spot dans ses usines et de commencer à tester l'humanoïde Atlas début 2027."
+    ]
+  },
+  {
     "numero": 4,
     "semaine_iso": "2026-S46",
     "date_publication": "2026-11-16",

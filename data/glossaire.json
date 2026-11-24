@@ -12,6 +12,12 @@
     "semaine": "2026-S46"
   },
   {
+    "terme": "Planification de gestes",
+    "slug": "planification-de-gestes",
+    "definition": "La planification de gestes consiste à choisir les mouvements d'un robot et leur ordre pour accomplir une tâche. Sur une étagère encombrée, le robot peut d'abord déplacer un obstacle, puis saisir l'objet demandé.",
+    "semaine": "2026-S47"
+  },
+  {
     "terme": "Robot en tant que service (RaaS)",
     "slug": "raas",
     "definition": "Un modèle où l'entreprise loue le robot avec son logiciel et sa maintenance, au lieu de l'acheter. GXO utilise ce modèle pour ses humanoïdes Digit depuis 2024 ; Sereact l'applique chez Otto Group.",
